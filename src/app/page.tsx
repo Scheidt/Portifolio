@@ -1,10 +1,10 @@
 import React from 'react';
-import NavMenu from '@/components/ui/nav-menu';
+import Navbar from '@/components/ui/nav-menu';
 
 const ProfileHeaderDark = () => {
   return (
     // Main background
-    <div><NavMenu></NavMenu>
+    <div><Navbar></Navbar>
       <div className="min-h-screen bg-neutral-950 text-white p-4 md:p-10 font-sans">
         
 
