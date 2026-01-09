@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={{ padding: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+    <nav style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000 }}>
       <Button 
         type="primary" 
         icon={<MenuOutlined />} 
@@ -38,7 +38,7 @@ const Navbar = () => {
         placement="right"
         onClose={onClose}
         open={open}
-        styles={{ body: { padding: 0 } }} // Modern AntD 'styles' prop
+        styles={{ body: { padding: 0 } }}
       >
         <Menu
           mode="vertical"
