@@ -14,10 +14,10 @@ const Navbar = () => {
 
   // Menu items configuration
   const items = [
-    { label: 'Sobre', key: '/sobre' },
-    { label: 'Projetos', key: '/projetos' },
-    { label: 'Habilidades', key: '/habilidades' },
-    { label: 'Contato', key: '/contato' },
+    { label: 'Sobre', key: '/about' },
+    { label: 'Projetos', key: '/projects' },
+    { label: 'Habilidades', key: '/skills' },
+    { label: 'Contato', key: '/contact' },
   ];
 
   const handleMenuClick = (e: { key: string }) => {
