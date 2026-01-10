@@ -1,51 +1,49 @@
-"use client"; // Required for hooks and Ant Design components
+"use client";
 
-import React, { useState } from "react";
-import { Drawer, Button, Menu } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
-import { useRouter } from "next/navigation"; // Use Next.js router
+import { useRouter, usePathname } from "next/navigation";
+import { DesktopNav } from "@ui/desktopNav";
+import { MobileNav } from "@ui/mobileNav";
+import { NAV_ROUTES } from "@/components/routes";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
-  const showDrawer = () => setOpen(true);
-  const onClose = () => setOpen(false);
-
-  // Itens do menu de navegação
-  const items = [
-    { label: "Home", key: "/" },
-    { label: "Sobre", key: "/about" },
-    { label: "Projetos", key: "/projects" },
-    { label: "Habilidades", key: "/skills" },
-    { label: "Contato", key: "/contact" },
-  ];
-
-  const handleMenuClick = (e: { key: string }) => {
-    router.push(e.key); // Next.js navigation
-    onClose(); // Close drawer
+  const handleNavigation = (path: string) => {
+    router.push(path);
   };
 
   return (
-    <nav
-      style={{ position: "fixed", top: "20px", right: "20px", zIndex: 1000 }}
-    >
-      <Button type="primary" icon={<MenuOutlined />} onClick={showDrawer} />
+    /* CHANGE: Removed 'fixed' and 'top-0'. 
+       The nav now occupies its own space in the document flow.
+    */
+    <nav className="w-full bg-white border-b border-gray-100 px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
+        {/* Brand / Logo */}
+        <button
+          type="button"
+          className="text-xl font-bold cursor-pointer hover:opacity-80 transition-opacity bg-transparent border-0 p-0"
+          onClick={() => handleNavigation('/')}
+          aria-label="Go to home"
+        >
+          BRAND
+        </button>
 
-      <Drawer
-        title="Menu"
-        placement="right"
-        onClose={onClose}
-        open={open}
-        styles={{ body: { padding: 0 } }}
-      >
-        <Menu
-          mode="vertical"
-          items={items}
-          onClick={handleMenuClick}
-          style={{ borderRight: "none" }}
+        {/* Desktop View (Standard Flow) */}
+        <DesktopNav 
+          items={NAV_ROUTES} 
+          currentPath={pathname} 
+          onNavigate={handleNavigation} 
         />
-      </Drawer>
+
+        {/* Mobile View (Hamburger) */}
+        <MobileNav 
+          items={NAV_ROUTES} 
+          currentPath={pathname} 
+          onNavigate={handleNavigation} 
+        />
+      </div>
     </nav>
   );
 };

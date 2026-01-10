@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Typography, Row, Col } from "antd";
 
 const { Title } = Typography;
@@ -37,7 +36,7 @@ const MinhaFormacao = () => {
                   <span className="mr-2">-</span>
                   <span>
                     Em 2020.2 entrei como bolsista para o curso de Direito na
-                    Unisul, o qual não completei.
+                    Unisul.
                   </span>
                 </li>
                 <li className="flex items-start">
