@@ -1,9 +1,9 @@
 "use client"; // Required for hooks and Ant Design components
 
-import React, { useState } from 'react';
-import { Drawer, Button, Menu } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/navigation'; // Use Next.js router
+import React, { useState } from "react";
+import { Drawer, Button, Menu } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import { useRouter } from "next/navigation"; // Use Next.js router
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -12,26 +12,24 @@ const Navbar = () => {
   const showDrawer = () => setOpen(true);
   const onClose = () => setOpen(false);
 
-  // Menu items configuration
+  // Itens do menu de navegação
   const items = [
-    { label: 'Sobre', key: '/about' },
-    { label: 'Projetos', key: '/projects' },
-    { label: 'Habilidades', key: '/skills' },
-    { label: 'Contato', key: '/contact' },
+    { label: "Sobre", key: "/about" },
+    { label: "Projetos", key: "/projects" },
+    { label: "Habilidades", key: "/skills" },
+    { label: "Contato", key: "/contact" },
   ];
 
   const handleMenuClick = (e: { key: string }) => {
     router.push(e.key); // Next.js navigation
-    onClose();          // Close drawer
+    onClose(); // Close drawer
   };
 
   return (
-    <nav style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000 }}>
-      <Button 
-        type="primary" 
-        icon={<MenuOutlined />} 
-        onClick={showDrawer} 
-      />
+    <nav
+      style={{ position: "fixed", top: "20px", right: "20px", zIndex: 1000 }}
+    >
+      <Button type="primary" icon={<MenuOutlined />} onClick={showDrawer} />
 
       <Drawer
         title="Menu"
@@ -44,7 +42,7 @@ const Navbar = () => {
           mode="vertical"
           items={items}
           onClick={handleMenuClick}
-          style={{ borderRight: 'none' }}
+          style={{ borderRight: "none" }}
         />
       </Drawer>
     </nav>
