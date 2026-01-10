@@ -14,6 +14,7 @@ const Navbar = () => {
 
   // Itens do menu de navegação
   const items = [
+    { label: "Home", key: "/" },
     { label: "Sobre", key: "/about" },
     { label: "Projetos", key: "/projects" },
     { label: "Habilidades", key: "/skills" },
