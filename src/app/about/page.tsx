@@ -19,25 +19,25 @@ const About = () => {
     <div>
       <div style={{ fontSize: "400%", fontWeight: 700 }}>Minha Jornada</div>
       <div>
-        <Navbar/>
+        <Navbar />
       </div>
       <div style={{ background: "#000", minHeight: "60vh", padding: "100px" }}>
         <HorizontalTimeline data={timelinedata} />
       </div>
       <div>
-        <MinhaFormacao/>
+        <MinhaFormacao />
       </div>
       <div>
-        <hr style ={{height:"3px", background:"#eee"}}/>
+        <hr style={{ height: "3px", background: "#eee" }} />
       </div>
       <div>
-        <OutrosCursos/>
+        <OutrosCursos />
       </div>
       <div>
-        <hr style ={{height:"3px", background:"#eee"}}/>
+        <hr style={{ height: "3px", background: "#eee" }} />
       </div>
       <div>
-        <Experiencia/>
+        <Experiencia />
       </div>
     </div>
   );

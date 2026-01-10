@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import { Typography, Row, Col } from 'antd';
+import React from "react";
+import { Typography, Row, Col } from "antd";
 
 const { Title, Text } = Typography;
 
@@ -12,41 +12,38 @@ const Experiencia = () => {
       instituicao: "Corte Catarinense de Mediação e Arbitragem",
       detalhes: [
         "Área de atuação: Auxiliar Financeiro/ Administrativo / Documentação",
-        "Atividade: Estágio"
-      ]
+        "Atividade: Estágio",
+      ],
     },
     {
       periodo: "04/2023 - 08/2023",
       instituicao: "Federação das Indústrias de Santa Catarina (FIESC)",
-      detalhes: [
-        "Área de atuação: Monitoração e SLA",
-        "Atividade: Estágio"
-      ]
+      detalhes: ["Área de atuação: Monitoração e SLA", "Atividade: Estágio"],
     },
     {
       periodo: "02/2025 - 10/2025",
       instituicao: "Laboratório de Robótica (UFSC)",
       detalhes: [
         "Área de atuação: Desenvolvimento de IA",
-        "Atividade: Bolsista"
-      ]
+        "Atividade: Bolsista",
+      ],
     },
     {
       periodo: "10/2025 - atualmente",
       instituicao: "Pixel Soluções Digitais (UFSC)",
       detalhes: [
         "Área de atuação: Desenvolvimento Fullstack",
-        "Atividade: Voluntário"
-      ]
+        "Atividade: Voluntário",
+      ],
     },
     {
       periodo: "10/2025 - atualmente",
       instituicao: "Laboratório REMA (UFSC)",
       detalhes: [
         "Área de atuação: Desenvolvimento Backend",
-        "Atividade: Bolsista"
-      ]
-    }
+        "Atividade: Bolsista",
+      ],
+    },
   ];
 
   return (
@@ -55,10 +52,7 @@ const Experiencia = () => {
         <Row gutter={[16, 32]}>
           {/* Título: Ocupa 1/3 (8 colunas) à esquerda */}
           <Col xs={24} md={8}>
-            <Title 
-              level={2} 
-              className="!text-3xl !font-bold !m-0 !text-black"
-            >
+            <Title level={2} className="!text-3xl !font-bold !m-0 !text-black">
               Experiência
             </Title>
           </Col>
@@ -76,7 +70,7 @@ const Experiencia = () => {
                         {exp.periodo}: {exp.instituicao}
                       </Text>
                     </div>
-                    
+
                     {/* Sub-tópicos com indentação */}
                     <ul className="list-none p-0 m-0 ml-8 space-y-1">
                       {exp.detalhes.map((detalhe, i) => (
