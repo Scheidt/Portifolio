@@ -2,21 +2,23 @@
 
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
-import DesktopNav from "@ui/desktopNav";
-import { MobileNav } from "@ui/mobileNav";
 import { NAV_ROUTES } from "@components/routes";
+import { MobileNav } from "@ui/mobileNav";
 
-const Navbar = () => {
+const DesktopNav = () => {
   const router = useRouter();
   const pathname = usePathname();
-
   const handleNavigation = (path: string) => {
     router.push(path);
   };
 
   return (
-    <nav className="fixed top-0 w-full z-[1000] bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-2">
+    /* CHANGE: Removed 'fixed' and 'top-0'. 
+       The nav now occupies its own space in the document flow.
+    */
+    <nav className="w-full bg-white border-b border-gray-100 px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
         {/* Brand / Logo */}
         <div 
           className="text-xl font-bold cursor-pointer hover:opacity-80 transition-opacity"
@@ -25,14 +27,14 @@ const Navbar = () => {
           BRAND
         </div>
 
-        {/* Desktop View */}
+        {/* Desktop View (Standard Flow) */}
         <DesktopNav 
           items={NAV_ROUTES} 
           currentPath={pathname} 
           onNavigate={handleNavigation} 
         />
 
-        {/* Mobile View */}
+        {/* Mobile View (Hamburger) */}
         <MobileNav 
           items={NAV_ROUTES} 
           currentPath={pathname} 
@@ -43,4 +45,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default DesktopNav;
