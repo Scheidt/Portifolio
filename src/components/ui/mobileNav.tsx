@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Drawer, Button, Menu } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
+interface NavProps {
+  items: { label: string; key: string }[];
+  currentPath: string;
+  onNavigate: (key: string) => void;
+}
+
 export const MobileNav = ({ items, currentPath, onNavigate }: NavProps) => {
   const [open, setOpen] = useState(false);
 

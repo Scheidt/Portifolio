@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
 import { useRouter, usePathname } from "next/navigation";
-import DesktopNav from "@ui/desktopNav";
+import { DesktopNav } from "@ui/desktopNav";
 import { MobileNav } from "@ui/mobileNav";
-import { NAV_ROUTES } from "@components/routes";
+import { NAV_ROUTES } from "@/components/routes";
 
 const Navbar = () => {
   const router = useRouter();
@@ -15,24 +14,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-[1000] bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-2">
+    /* CHANGE: Removed 'fixed' and 'top-0'. 
+       The nav now occupies its own space in the document flow.
+    */
+    <nav className="w-full bg-white border-b border-gray-100 px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
         {/* Brand / Logo */}
-        <div 
-          className="text-xl font-bold cursor-pointer hover:opacity-80 transition-opacity"
+        <button
+          type="button"
+          className="text-xl font-bold cursor-pointer hover:opacity-80 transition-opacity bg-transparent border-0 p-0"
           onClick={() => handleNavigation('/')}
+          aria-label="Go to home"
         >
           BRAND
-        </div>
+        </button>
 
-        {/* Desktop View */}
+        {/* Desktop View (Standard Flow) */}
         <DesktopNav 
           items={NAV_ROUTES} 
           currentPath={pathname} 
           onNavigate={handleNavigation} 
         />
 
-        {/* Mobile View */}
+        {/* Mobile View (Hamburger) */}
         <MobileNav 
           items={NAV_ROUTES} 
           currentPath={pathname} 

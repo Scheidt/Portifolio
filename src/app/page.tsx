@@ -16,7 +16,7 @@ const ProfileHeaderDark = () => {
   return (
     // Main background
     <div>
-      <Navbar></Navbar>
+      <Navbar/>
       <div className="min-h-screen bg-neutral-950 text-white p-4 md:p-10 font-sans">
         {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
