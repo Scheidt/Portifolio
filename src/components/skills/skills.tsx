@@ -106,6 +106,11 @@ const CV_DATA: CVData = {
   ],
 };
 
+
+
+
+
+
 // 2. SUB-COMPONENTE DE UI (Apresentação)
 const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
   <Card
