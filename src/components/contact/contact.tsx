@@ -10,33 +10,33 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 const { TextArea } = Input;
 
 const TEXTS = {
-  formSubmitted: 'Form Submitted:',
-  successMessage: 'Thank you! Your message has been sent.',
+  formSubmitted: 'Formulário enviado:',
+  successMessage: 'Obrigado! Sua mensagem foi enviada.',
 
-  leftTitle: 'Get in Touch',
-  leftIntro: "We'd love to hear from you. Our team is always here to chat.",
-  contactEmail: 'hello@example.com',
-  contactPhone: '+1 (555) 000-0000',
-  contactAddress: '123 Innovation Way, CA',
+  leftTitle: 'Fale conosco',
+  leftIntro: 'Adoraríamos receber sua mensagem. Nossa equipe está sempre disponível para conversar.',
+  contactEmail: 'pedro@example.com',
+  contactPhone: '+55 (048) 000-0000',
+  contactAddress: 'Endereço: Rua Exemplo, 123, Cidade, País',
 
-  rightTitle: 'Send us a message',
+  rightTitle: 'Envie uma mensagem',
 
-  labelName: 'Full Name',
-  labelEmail: 'Email Address',
-  labelSubject: 'Subject',
-  labelMessage: 'Message',
+  labelName: 'Nome completo',
+  labelEmail: 'E-mail',
+  labelSubject: 'Assunto',
+  labelMessage: 'Mensagem',
 
-  placeholderName: 'John Doe',
-  placeholderEmail: 'john@example.com',
-  placeholderSubject: 'How can we help?',
-  placeholderMessage: 'Tell us more about your inquiry...',
+  placeholderName: 'João da Silva',
+  placeholderEmail: 'joao@exemplo.com',
+  placeholderSubject: 'Como podemos ajudar?',
+  placeholderMessage: 'Qual o motivo do seu contato?',
 
-  validationNameRequired: 'Please enter your name',
-  validationEmailRequired: 'Please enter your email',
-  validationEmailInvalid: 'Please enter a valid email',
-  validationMessageRequired: 'Please enter your message',
+  validationNameRequired: 'Por favor, insira seu nome',
+  validationEmailRequired: 'Por favor, insira seu e-mail',
+  validationEmailInvalid: 'Por favor, insira um e-mail válido',
+  validationMessageRequired: 'Por favor, insira sua mensagem',
 
-  sendButton: 'Send Message',
+  sendButton: 'Enviar mensagem',
 };
 
 const ContactPage = () => {
