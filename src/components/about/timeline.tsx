@@ -11,18 +11,17 @@ interface TimelineProps {
 const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
   // Convert the dictionary into the format Ant Design Steps expects
   const items = Object.entries(data).map(([key, value]) => ({
-    title: <span style={{ color: "#fff", fontWeight: "bold" }}>{key}</span>,
+    title: <span style={{ color: "#1f2937", fontWeight: "bold" }}>{key}</span>,
     description: (
-      <span style={{ color: "rgba(255,255,255,0.6)" }}>{value}</span>
+      <span style={{ color: "#6b7280" }}>{value}</span>
     ),
   }));
 
   return (
     <ConfigProvider
       theme={{
-        algorithm: theme.darkAlgorithm,
         token: {
-          colorPrimary: "#ffffff", // High contrast white for the dots
+          colorPrimary: "#2563eb", // Blue-600 for the dots
         },
       }}
     >
@@ -37,12 +36,12 @@ const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
           /* Thickness of the horizontal line */
           .ant-steps-item-tail::after {
             height: 6px !important; 
-            background-color: white !important;
+            background-color: #2563eb !important;
           }
           /* Style of the dots */
           .ant-steps-item-process .ant-steps-item-icon {
-            background: #fff !important;
-            border-color: #fff !important;
+            background: #2563eb !important;
+            border-color: #2563eb !important;
             width: 14px !important;
             height: 14px !important;
             margin-top: 8px; /* Centers dot with thicker line */

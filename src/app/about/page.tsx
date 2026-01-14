@@ -17,11 +17,13 @@ const About = () => {
   return (
     // Main background
     <div>
-      <div style={{ fontSize: "400%", fontWeight: 700 }}>Minha Jornada</div>
       <div>
         <Navbar />
       </div>
-      <div style={{ background: "#000", minHeight: "60vh", padding: "100px" }}>
+      <div className= "!text-black" style={{ background: "#f9fafb", fontSize: "400%", fontWeight: 700}}>
+        Minha Jornada
+      </div>
+      <div style={{ background: "#f9fafb", minHeight: "60vh", padding: "100px" }}>
         <HorizontalTimeline data={timelinedata} />
       </div>
       <div>
