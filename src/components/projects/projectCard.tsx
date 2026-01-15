@@ -3,7 +3,6 @@
 import React from "react";
 import { Card, Tag, Typography, Row, Col } from "antd";
 import { GithubOutlined, DeploymentUnitOutlined } from "@ant-design/icons";
-import { colors } from "@/colors";
 
 const { Title, Paragraph, Text, Link } = Typography;
 
@@ -24,7 +23,7 @@ interface ProjectGridProps {
 // Card individual
 const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
   const hasColor = !!item.color;
-  const accentColor = item.color || colors.defaults.accent; // Se não houver cor, usar cinza padrão
+  const accentColor = item.color || "#d1d5db"; // Se não houver cor, usar cinza padrão
 
   return (
     <Card
@@ -48,7 +47,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
         <div
           className="p-2 rounded-lg mr-3 text-xl flex items-center justify-center"
           style={{ 
-            backgroundColor: hasColor ? `${item.color}15` : colors.defaults.iconBackground, 
+            backgroundColor: hasColor ? `${item.color}15` : '#f3f4f6', 
             color: accentColor 
           }}
         >
@@ -89,11 +88,11 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
 
       {/* Footer: Link do Github */}
       <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-2">
-        <GithubOutlined style={{ color: hasColor ? item.color : colors.gray[600] }} />
+        <GithubOutlined style={{ color: hasColor ? item.color : '#4b5563' }} />
         <Link 
           href={item.link} 
           target="_blank" 
-          style={{ color: hasColor ? item.color : colors.antd.link }}
+          style={{ color: hasColor ? item.color : '#1677ff' }}
           className="text-sm font-medium hover:opacity-80 transition-opacity"
         >
           Link para o repositório
@@ -113,7 +112,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
       {sectionTitle && (
         <header className="mb-10">
           <Title level={2} className="flex items-center gap-3">
-            <span className="w-2 h-8 rounded-full block" style={{ backgroundColor: colors.primary.blue }} />
+            <span className="bg-blue-600 w-2 h-8 rounded-full block" />
             {sectionTitle}
           </Title>
         </header>

@@ -6,7 +6,6 @@ import Button from 'antd/es/button';
 import message from 'antd/es/message';
 import ConfigProvider from 'antd/es/config-provider';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { colors } from "@/colors";
 
 const { TextArea } = Input;
 
@@ -55,9 +54,9 @@ const ContactPage = () => {
         <div className="flex flex-col md:flex-row">
           
           {/* Left Column: Contact Information */}
-          <div className="w-full md:w-1/3 p-8 text-white" style={{ backgroundColor: colors.primary.blue }}>
+          <div className="bg-blue-600 w-full md:w-1/3 p-8 text-white">
             <h2 className="text-3xl font-bold mb-6">{TEXTS.leftTitle}</h2>
-            <p className="mb-8" style={{ color: colors.tailwind.blue[100] }}>{TEXTS.leftIntro}</p>
+            <p className="text-blue-100 mb-8">{TEXTS.leftIntro}</p>
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
@@ -82,7 +81,7 @@ const ContactPage = () => {
             <ConfigProvider
               theme={{
                 token: {
-                  colorPrimary: colors.primary.blue, // Tailwind blue-600
+                  colorPrimary: '#2563eb', // Tailwind blue-600
                   borderRadius: 6,
                 },
               }}

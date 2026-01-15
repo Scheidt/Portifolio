@@ -12,7 +12,6 @@ import {
   ThunderboltOutlined,
   BlockOutlined,
 } from "@ant-design/icons";
-import { colors } from "@/colors";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -42,7 +41,7 @@ const CV_DATA: CVData = {
     {
       title: "Python",
       icon: <CodeOutlined />,
-      color: colors.tech.python,
+      color: "#3776ab",
       university: [
         "Programação Orientada a Objetos",
         "Desenvolvimento de Sistemas OO",
@@ -53,7 +52,7 @@ const CV_DATA: CVData = {
     {
       title: "Web & MERN",
       icon: <GlobalOutlined />,
-      color: colors.tech.react,
+      color: "#61dbfb",
       university: ["Programação para Web"],
       extra: "The Complete 2023 Web Development Bootcamp (Udemy)",
       tags: ["HTML", "CSS", "JavaScript", "MERN"],
@@ -61,7 +60,7 @@ const CV_DATA: CVData = {
     {
       title: "PostgreSQL",
       icon: <DatabaseOutlined />,
-      color: colors.tech.postgresql,
+      color: "#336791",
       university: [
         "Bancos de Dados 1",
         "Bancos de Dados 2",
@@ -72,19 +71,19 @@ const CV_DATA: CVData = {
     {
       title: "GoLang",
       icon: <BlockOutlined />,
-      color: colors.tech.golang,
+      color: "#00add8",
       extra: "Curso à parte",
     },
     {
       title: "Docker",
       icon: <RocketOutlined />,
-      color: colors.tech.docker,
+      color: "#2496ed",
       extra: "Containerização e Orquestração",
     },
     {
       title: "C++",
       icon: <ThunderboltOutlined />,
-      color: colors.tech.cpp,
+      color: "#00599c",
       university: [
         "Sistemas Operacionais",
         "Programação paralela e multicomputadores",
@@ -93,7 +92,7 @@ const CV_DATA: CVData = {
     {
       title: "Java",
       icon: <SafetyCertificateOutlined />,
-      color: colors.tech.java,
+      color: "#ed8b00",
       extra: "Bouncy Castle - Chaves assimétricas, Assinaturas digitais",
     },
   ],
@@ -185,7 +184,7 @@ const PortfolioComponent: React.FC = () => {
         {/* Header Dinâmico */}
         <header className="mb-12">
           <Title level={2} className="flex items-center gap-3">
-            <span className="w-2 h-8 rounded-full block" style={{ backgroundColor: colors.primary.blue }} />
+            <span className="bg-blue-600 w-2 h-8 rounded-full block" />
             {CV_DATA.header.title}
           </Title>
           <Text className="text-lg text-gray-500">
@@ -216,12 +215,7 @@ const PortfolioComponent: React.FC = () => {
             {CV_DATA.competencies.map((skill: string, compIndex: number) => (
               <Col xs={24} md={12} key={compIndex}>
                 <div className="flex items-start gap-3 group">
-                  <div 
-                    className="mt-1.5 w-2 h-2 rounded-full transition-colors group-hover:bg-blue-600" 
-                    style={{ 
-                      backgroundColor: colors.tailwind.blue[400],
-                    }}
-                  />
+                  <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-400 group-hover:bg-blue-600 transition-colors" />
                   <Text className="text-[15px] text-gray-600 group-hover:text-gray-900 transition-colors">
                     {skill}
                   </Text>

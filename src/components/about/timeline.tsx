@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Steps, ConfigProvider, theme } from "antd";
-import { colors } from "@/colors";
 
 interface TimelineProps {
   // Accepts a dictionary like { "2024": "Started Project", "2025": "Growth" }
@@ -12,17 +11,18 @@ interface TimelineProps {
 const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
   // Convert the dictionary into the format Ant Design Steps expects
   const items = Object.entries(data).map(([key, value]) => ({
-    title: <span style={{ color: colors.gray[800], fontWeight: "bold" }}>{key}</span>,
+    title: <span style={{ color: "#fff", fontWeight: "bold" }}>{key}</span>,
     description: (
-      <span style={{ color: colors.gray[500] }}>{value}</span>
+      <span style={{ color: "rgba(255,255,255,0.6)" }}>{value}</span>
     ),
   }));
 
   return (
     <ConfigProvider
       theme={{
+        algorithm: theme.darkAlgorithm,
         token: {
-          colorPrimary: colors.primary.blue, // Blue-600 for the dots
+          colorPrimary: "#ffffff", // High contrast white for the dots
         },
       }}
     >
@@ -37,12 +37,12 @@ const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
           /* Thickness of the horizontal line */
           .ant-steps-item-tail::after {
             height: 6px !important; 
-            background-color: ${colors.primary.blue} !important;
+            background-color: white !important;
           }
           /* Style of the dots */
           .ant-steps-item-process .ant-steps-item-icon {
-            background: ${colors.primary.blue} !important;
-            border-color: ${colors.primary.blue} !important;
+            background: #fff !important;
+            border-color: #fff !important;
             width: 14px !important;
             height: 14px !important;
             margin-top: 8px; /* Centers dot with thicker line */
