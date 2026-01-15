@@ -60,7 +60,6 @@ const ProjectComponent = () => {
         <FeatureGrid 
             items={projetos} 
             sectionTitle="Meus Projetos"
-            accentColor="#ff5722"
         />
     );
 }

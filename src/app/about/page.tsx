@@ -3,6 +3,7 @@ import HorizontalTimeline from "@/components/about/timeline";
 import MinhaFormacao from "@/components/about/minhaformacao";
 import OutrosCursos from "@/components/about/outrosCursos";
 import Experiencia from "@/components/about/experiencia";
+import { colors } from "@/colors";
 
 const About = () => {
   const timelinedata = {
@@ -20,23 +21,23 @@ const About = () => {
       <div>
         <Navbar />
       </div>
-      <div className= "!text-black" style={{ background: "#f9fafb", fontSize: "400%", fontWeight: 700}}>
+      <div className= "!text-black" style={{ background: colors.semantic.background, fontSize: "400%", fontWeight: 700}}>
         Minha Jornada
       </div>
-      <div style={{ background: "#f9fafb", minHeight: "60vh", padding: "100px" }}>
+      <div style={{ background: colors.semantic.background, minHeight: "60vh", padding: "100px" }}>
         <HorizontalTimeline data={timelinedata} />
       </div>
       <div>
         <MinhaFormacao />
       </div>
       <div>
-        <hr style={{ height: "3px", background: "#eee" }} />
+        <hr style={{ height: "3px", background: colors.semantic.divider }} />
       </div>
       <div>
         <OutrosCursos />
       </div>
       <div>
-        <hr style={{ height: "3px", background: "#eee" }} />
+        <hr style={{ height: "3px", background: colors.semantic.divider }} />
       </div>
       <div>
         <Experiencia />
