@@ -18,10 +18,10 @@ export const MobileNav = ({ items, currentPath, onNavigate }: NavProps) => {
 
   return (
     <div className="md:hidden">
-      <Button 
-        type="text" 
-        icon={<MenuOutlined className="text-xl" />} 
-        onClick={() => setOpen(true)} 
+      <Button
+        type="text"
+        icon={<MenuOutlined className="text-xl" />}
+        onClick={() => setOpen(true)}
       />
       <Drawer
         title="Menu"

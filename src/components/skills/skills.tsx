@@ -1,6 +1,5 @@
 "use client";
 
-"use client";
 import React from "react";
 import { Card, Tag, Typography, Divider, Row, Col } from "antd";
 import {
@@ -45,6 +44,7 @@ const CV_DATA: CVData = {
       university: [
         "Programação Orientada a Objetos",
         "Desenvolvimento de Sistemas OO",
+        "Organização e Arquitetura de Computadores",
       ],
       extra: "100 Days of Code: The Complete Python Pro Bootcamp (Udemy)",
       tags: ["Pandas", "Matplotlib", "Statsmodels", "Seaborn"],
@@ -53,12 +53,25 @@ const CV_DATA: CVData = {
       title: "Web & MERN",
       icon: <GlobalOutlined />,
       color: "#61dbfb",
-      university: ["Programação para Web"],
+      university: [
+        "Programação para Web",
+        "Desenvolvimento de Sistemas Móveis e Embarcados",
+      ],
       extra: "The Complete 2023 Web Development Bootcamp (Udemy)",
-      tags: ["HTML", "CSS", "JavaScript", "MERN"],
+      tags: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "MERN",
+        "Next.js",
+        "React",
+        "Node.js",
+        "Ant Design",
+        "Better Auth",
+      ],
     },
     {
-      title: "PostgreSQL",
+      title: "Bancos de Dados",
       icon: <DatabaseOutlined />,
       color: "#336791",
       university: [
@@ -67,12 +80,21 @@ const CV_DATA: CVData = {
         "Bancos de Dados 3",
         "Tópicos Especiais em Gerência de Dados",
       ],
+      tags: [
+        "SQL",
+        "NoSQL",
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "Neo4j",
+        "Prisma",
+      ],
     },
     {
       title: "GoLang",
       icon: <BlockOutlined />,
       color: "#00add8",
-      extra: "Curso à parte",
+      university: ["Programação Paralela e Distribuída"],
     },
     {
       title: "Docker",
@@ -87,12 +109,19 @@ const CV_DATA: CVData = {
       university: [
         "Sistemas Operacionais",
         "Programação paralela e multicomputadores",
+        "Desenvolvimento de Sistemas Móveis e Embarcados",
+        "Introdução a Compiladores"
       ],
     },
     {
       title: "Java",
       icon: <SafetyCertificateOutlined />,
       color: "#ed8b00",
+      university: [
+        "Programação Orientada a Objetos",
+        "Desenvolvimento de Sistemas OO",
+        "Segurança de Dados",
+      ],
       extra: "Bouncy Castle - Chaves assimétricas, Assinaturas digitais",
     },
   ],
@@ -103,13 +132,10 @@ const CV_DATA: CVData = {
     "Conhecimento sobre SCRUM e Agile",
     "Conhecimento de BPM",
     "Conhecimentos de segurança de dados",
+    "Japonês N5",
+    "Inglês nativo",
   ],
 };
-
-
-
-
-
 
 // 2. SUB-COMPONENTE DE UI (Apresentação)
 const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
