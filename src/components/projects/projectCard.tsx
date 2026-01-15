@@ -29,26 +29,26 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
     <Card
       hoverable
       className="h-full shadow-sm"
-      style={{ 
+      style={{
         // Linha decorativa condicional
-        borderTop: hasColor ? `4px solid ${item.color}` : 'none' 
+        borderTop: hasColor ? `4px solid ${item.color}` : "none",
       }}
       styles={{
         body: {
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%',
-          padding: '24px'
-        }
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          padding: "24px",
+        },
       }}
     >
       {/* Header: Ícone e Título */}
       <div className="flex items-center mb-4">
         <div
           className="p-2 rounded-lg mr-3 text-xl flex items-center justify-center"
-          style={{ 
-            backgroundColor: hasColor ? `${item.color}15` : '#f3f4f6', 
-            color: accentColor 
+          style={{
+            backgroundColor: hasColor ? `${item.color}15` : "#f3f4f6",
+            color: accentColor,
           }}
         >
           <DeploymentUnitOutlined />
@@ -88,11 +88,11 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
 
       {/* Footer: Link do Github */}
       <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-2">
-        <GithubOutlined style={{ color: hasColor ? item.color : '#4b5563' }} />
-        <Link 
-          href={item.link} 
-          target="_blank" 
-          style={{ color: hasColor ? item.color : '#1677ff' }}
+        <GithubOutlined style={{ color: hasColor ? item.color : "#4b5563" }} />
+        <Link
+          href={item.link}
+          target="_blank"
+          style={{ color: hasColor ? item.color : "#1677ff" }}
           className="text-sm font-medium hover:opacity-80 transition-opacity"
         >
           Link para o repositório
@@ -103,9 +103,9 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
 };
 
 // Controlador de Card Grid
-const ProjectGrid: React.FC<ProjectGridProps> = ({ 
-  items, 
-  sectionTitle = "Projetos e Repositórios" 
+const ProjectGrid: React.FC<ProjectGridProps> = ({
+  items,
+  sectionTitle = "Projetos e Repositórios",
 }) => {
   return (
     <div className="w-full">
@@ -117,7 +117,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
           </Title>
         </header>
       )}
-      
+
       <Row gutter={[24, 24]}>
         {items.map((item, index) => (
           <Col xs={24} sm={12} lg={8} key={index}>

@@ -4,13 +4,12 @@ import Navbar from "@ui/nav-menu";
 const ProfileHeaderDark = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div>
-      <ContactPage />
+        <ContactPage />
       </div>
     </div>
-  )
-
-}
+  );
+};
 
 export default ProfileHeaderDark;

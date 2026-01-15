@@ -12,9 +12,7 @@ const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
   // Convert the dictionary into the format Ant Design Steps expects
   const items = Object.entries(data).map(([key, value]) => ({
     title: <span style={{ color: "#1f2937", fontWeight: "bold" }}>{key}</span>,
-    description: (
-      <span style={{ color: "#6b7280" }}>{value}</span>
-    ),
+    description: <span style={{ color: "#6b7280" }}>{value}</span>,
   }));
 
   return (
@@ -27,7 +25,7 @@ const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
     >
       <div style={{ padding: "40px 0", width: "100%" }}>
         <Steps
-          labelPlacement="vertical"
+          titlePlacement="vertical"
           current={items.length} // Keeps all items highlighted
           items={items}
         />
