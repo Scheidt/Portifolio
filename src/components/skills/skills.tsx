@@ -110,6 +110,7 @@ const CV_DATA: CVData = {
         "Sistemas Operacionais",
         "Programação paralela e multicomputadores",
         "Desenvolvimento de Sistemas Móveis e Embarcados",
+        "Introdução a Compiladores"
       ],
     },
     {
