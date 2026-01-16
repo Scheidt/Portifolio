@@ -10,7 +10,8 @@ import {
   RocketOutlined,
   ThunderboltOutlined,
   BlockOutlined,
-} from "@ant-design/icons";
+} from "@ant-design/icons"; 
+import SkillCard from "./skillCard";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -129,6 +130,14 @@ const CV_DATA: CVData = {
     "Experiência com programação orientada a objetos e padrão MVC",
     "Experiência com monitoração (Zabbix e OpMon)",
     "Experiência com programação multithread concorrente",
+    "Experiência com Docker e containerização",
+    "Experiência com desenvolvimento web (front-end e back-end)",
+    "Experiência com bancos de dados relacionais",
+    "Experiência com Sistemas de autenticação e permissão de usuários",
+    "Experiência com Git e GitHub",
+    "Conhecimento em algoritmos e estruturas de dados",
+    "Conhecimento em design patterns",
+    "Conhecimento em testes unitários e TDD",
     "Conhecimento sobre SCRUM e Agile",
     "Conhecimento de BPM",
     "Conhecimentos de segurança de dados",
@@ -137,70 +146,6 @@ const CV_DATA: CVData = {
   ],
 };
 
-// Skill Card Sub-component
-const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
-  <Card
-    hoverable
-    className="h-full border-t-4 shadow-sm"
-    style={{ borderTopColor: data.color }}
-  >
-    <div className="flex items-center mb-4">
-      <div
-        className="p-2 rounded-lg mr-3 text-xl flex items-center justify-center"
-        style={{ backgroundColor: `${data.color}15`, color: data.color }}
-      >
-        {data.icon}
-      </div>
-      <Title level={4} style={{ margin: 0 }}>
-        {data.title}
-      </Title>
-    </div>
-
-    {data.university && (
-      <div className="mb-3">
-        <Text
-          type="secondary"
-          className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
-        >
-          Aulas da Faculdade
-        </Text>
-        <ul className="list-disc list-inside text-sm text-gray-600 leading-relaxed">
-          {data.university.map((item: string, uniIndex: number) => (
-            <li key={uniIndex}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    )}
-
-    {data.extra && (
-      <div className="mb-3">
-        <Text
-          type="secondary"
-          className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
-        >
-          Curso Adicional
-        </Text>
-        <Paragraph className="text-sm italic text-gray-700 m-0">
-          {data.extra}
-        </Paragraph>
-      </div>
-    )}
-
-    {data.tags && (
-      <div className="mt-4 pt-2 border-t border-gray-50">
-        {data.tags.map((tag: string) => (
-          <Tag
-            color="default"
-            key={tag}
-            className="mb-1 rounded-full border-gray-200 text-gray-500"
-          >
-            {tag}
-          </Tag>
-        ))}
-      </div>
-    )}
-  </Card>
-);
 
 // Main Component
 const PortfolioComponent: React.FC = () => {
