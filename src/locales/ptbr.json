@@ -142,7 +142,17 @@
           "Desenvolvimento de Sistemas Móveis e Embarcados"
         ],
         "extra": "The Complete 2023 Web Development Bootcamp (Udemy)",
-        "tags": ["HTML", "CSS", "JavaScript", "MERN", "Next.js", "React", "Node.js", "Ant Design", "Better Auth"]
+        "tags": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "MERN",
+          "Next.js",
+          "React",
+          "Node.js",
+          "Ant Design",
+          "Better Auth"
+        ]
       },
       {
         "title": "Bancos de Dados",
@@ -152,7 +162,15 @@
           "Bancos de Dados 3",
           "Tópicos Especiais em Gerência de Dados"
         ],
-        "tags": ["SQL", "NoSQL", "MongoDB", "PostgreSQL", "MySQL", "Neo4j", "Prisma"]
+        "tags": [
+          "SQL",
+          "NoSQL",
+          "MongoDB",
+          "PostgreSQL",
+          "MySQL",
+          "Neo4j",
+          "Prisma"
+        ]
       },
       {
         "title": "GoLang",
@@ -213,19 +231,37 @@
       {
         "title": "Criação, Manipulação e Validação de Chaves Assimétricas",
         "description": "Desafio LABSEC - Criação de um sistema em Java para geração, manipulação e validação de chaves assimétricas utilizando a biblioteca BouncyCastle. Adicionalmente, as primeiras 4 questões do Cryptopals",
-        "tags": ["Java", "BouncyCastle", "Cryptography", "Cybersecurity", "Assimetric Keys"],
+        "tags": [
+          "Java",
+          "BouncyCastle",
+          "Cryptography",
+          "Cybersecurity",
+          "Assimetric Keys"
+        ],
         "link": "https://github.com/Scheidt/Desafio-Labsec"
       },
       {
         "title": "Classificador Binário com Machine Learning",
         "description": "Classificador Binário utilizando dois modelos: Naive Bayes e MLP.",
-        "tags": ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "NumPy"],
+        "tags": [
+          "Python",
+          "Machine Learning",
+          "Scikit-Learn",
+          "Pandas",
+          "NumPy"
+        ],
         "link": "https://github.com/Scheidt/Classificador-Binario"
       },
       {
         "title": "Projeto Multitread em GO",
         "description": "Projeto desenvolvido em Go para demonstrar conceitos de programação concorrente e multitread.",
-        "tags": ["GoLang", "Concurrency", "Goroutines", "Channels", "Multithreading"],
+        "tags": [
+          "GoLang",
+          "Concurrency",
+          "Goroutines",
+          "Channels",
+          "Multithreading"
+        ],
         "link": "https://github.com/Scheidt/Projeto-Threads-GO"
       },
       {
