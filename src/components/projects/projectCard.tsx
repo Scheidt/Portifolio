@@ -1,6 +1,6 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: <data is never edited, therefore there is no need for a robust ID system> */
 "use client";
 
-import React from "react";
 import { Card, Tag, Typography, Row, Col } from "antd";
 import { GithubOutlined, DeploymentUnitOutlined } from "@ant-design/icons";
 
@@ -8,7 +8,7 @@ const { Title, Paragraph, Text, Link } = Typography;
 
 // Tipagem de Interface
 interface ProjectItem {
-  Title: string;
+  title: string;
   description: string;
   tags?: string[];
   color?: string;
@@ -20,7 +20,7 @@ interface ProjectGridProps {
   sectionTitle?: string;
 }
 
-// Card individual
+// Individual Project Card
 const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
   const hasColor = !!item.color;
   const accentColor = item.color || "#d1d5db"; // Se não houver cor, usar cinza padrão
@@ -30,7 +30,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
       hoverable
       className="h-full shadow-sm"
       style={{
-        // Linha decorativa condicional
+        // This Line may exist if a color was provided in the item
         borderTop: hasColor ? `4px solid ${item.color}` : "none",
       }}
       styles={{
@@ -42,7 +42,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
         },
       }}
     >
-      {/* Header: Ícone e Título */}
+      {/* Header: Icon and title */}
       <div className="flex items-center mb-4">
         <div
           className="p-2 rounded-lg mr-3 text-xl flex items-center justify-center"
@@ -54,11 +54,11 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
           <DeploymentUnitOutlined />
         </div>
         <Title level={4} style={{ margin: 0 }}>
-          {item.Title}
+          {item.title}
         </Title>
       </div>
 
-      {/* Descrição */}
+      {/* Description */}
       <div className="mb-3 flex-grow">
         <Text
           type="secondary"
@@ -86,7 +86,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
         </div>
       )}
 
-      {/* Footer: Link do Github */}
+      {/* Footer: Github Link */}
       <div className="mt-auto pt-3 border-t border-gray-100 flex items-center gap-2">
         <GithubOutlined style={{ color: hasColor ? item.color : "#4b5563" }} />
         <Link
@@ -102,7 +102,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
   );
 };
 
-// Controlador de Card Grid
+// CArd grid controller component3
 const ProjectGrid: React.FC<ProjectGridProps> = ({
   items,
   sectionTitle = "Projetos e Repositórios",

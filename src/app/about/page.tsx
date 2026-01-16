@@ -15,13 +15,12 @@ const About = () => {
     "2026 e adiante": "Continuar crescendo e aprendendo como desenvolvedor",
   };
   return (
-    // Main background
     <div>
       <div>
         <Navbar />
       </div>
       <div
-        className="!text-black"
+        className="text-black!"
         style={{ background: "#f9fafb", fontSize: "400%", fontWeight: 700 }}
       >
         Minha Jornada
@@ -35,13 +34,13 @@ const About = () => {
         <MinhaFormacao />
       </div>
       <div>
-        <hr style={{ height: "3px", background: "#eee" }} />
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       </div>
       <div>
         <OutrosCursos />
       </div>
       <div>
-        <hr style={{ height: "3px", background: "#eee" }} />
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       </div>
       <div>
         <Experiencia />

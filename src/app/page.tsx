@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/ui/nav-menu";
 import pfp from "@/images/pfp.jpg";
@@ -14,7 +13,6 @@ const TEXT = {
 
 const ProfileHeaderDark = () => {
   return (
-    // Main background
     <div>
       <Navbar />
       <div className="min-h-screen bg-gray-50 text-gray-800 p-4 md:p-10 font-sans">
@@ -34,7 +32,7 @@ const ProfileHeaderDark = () => {
             </div>
           </div>
 
-          {/* Right: 2 Units*/}
+          {/* Right: titulo + descricao*/}
           <div className="md:col-span-2 flex flex-col">
             <h2 className="text-3xl font-bold mb-4 tracking-tight text-gray-800">
               {TEXT.title}

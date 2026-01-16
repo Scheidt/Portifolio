@@ -15,7 +15,7 @@ const TEXTS = {
 
   leftTitle: "Fale conosco",
   leftIntro:
-    "Adoraríamos receber sua mensagem. Nossa equipe está sempre disponível para conversar.",
+    "Adoraria receber sua mensagem. Estou sempre feliz de conversar sobre programação.",
   contactEmail: "pedro@example.com",
   contactPhone: "+55 (048) 000-0000",
   contactAddress: "Endereço: Rua Exemplo, 123, Cidade, País",
@@ -28,8 +28,8 @@ const TEXTS = {
   labelMessage: "Mensagem",
 
   placeholderName: "João da Silva",
-  placeholderEmail: "joao@exemplo.com",
-  placeholderSubject: "Como podemos ajudar?",
+  placeholderEmail: "joao@pixel.com",
+  placeholderSubject: "Como posso ajudar?",
   placeholderMessage: "Qual o motivo do seu contato?",
 
   validationNameRequired: "Por favor, insira seu nome",
@@ -43,7 +43,7 @@ const TEXTS = {
 const ContactPage = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
+  const onFinish = (values: any) => {
     console.log(TEXTS.formSubmitted, values);
     message.success(TEXTS.successMessage);
     form.resetFields();
@@ -53,7 +53,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="flex flex-col md:flex-row">
-          {/* Left Column: Contact Information */}
+          {/* Left part: contact information*/}
           <div className="bg-blue-600 w-full md:w-1/3 p-8 text-white">
             <h2 className="text-3xl font-bold mb-6">{TEXTS.leftTitle}</h2>
             <p className="text-blue-100 mb-8">{TEXTS.leftIntro}</p>
@@ -74,7 +74,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* Right Column: Ant Design Form */}
+          {/* Right Part: Form Fields */}
           <div className="w-full md:w-2/3 p-8">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">
               {TEXTS.rightTitle}
@@ -83,7 +83,7 @@ const ContactPage = () => {
             <ConfigProvider
               theme={{
                 token: {
-                  colorPrimary: "#2563eb", // Tailwind blue-600
+                  colorPrimary: "#2563eb",
                   borderRadius: 6,
                 },
               }}

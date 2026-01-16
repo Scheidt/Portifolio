@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: <data is never edited, therefore there is no need for a robust ID system> */
 "use client";
 
 import React from "react";
@@ -10,11 +11,12 @@ import {
   RocketOutlined,
   ThunderboltOutlined,
   BlockOutlined,
-} from "@ant-design/icons";
+} from "@ant-design/icons"; 
+import SkillCard from "./skillCard";
 
 const { Title, Text, Paragraph } = Typography;
 
-// 1. TYPES
+// Types
 type SkillData = {
   title: string;
   icon?: React.ReactNode;
@@ -30,7 +32,7 @@ type CVData = {
   competencies: string[];
 };
 
-// 2. DICIONÁRIO DE DADOS (Configuração Centralizada)
+// Centralized Data Dicts
 const CV_DATA: CVData = {
   header: {
     title: "Linguagens de Programação",
@@ -110,7 +112,7 @@ const CV_DATA: CVData = {
         "Sistemas Operacionais",
         "Programação paralela e multicomputadores",
         "Desenvolvimento de Sistemas Móveis e Embarcados",
-        "Introdução a Compiladores"
+        "Introdução a Compiladores",
       ],
     },
     {
@@ -129,6 +131,14 @@ const CV_DATA: CVData = {
     "Experiência com programação orientada a objetos e padrão MVC",
     "Experiência com monitoração (Zabbix e OpMon)",
     "Experiência com programação multithread concorrente",
+    "Experiência com Docker e containerização",
+    "Experiência com desenvolvimento web (front-end e back-end)",
+    "Experiência com bancos de dados relacionais",
+    "Experiência com Sistemas de autenticação e permissão de usuários",
+    "Experiência com Git e GitHub",
+    "Conhecimento em algoritmos e estruturas de dados",
+    "Conhecimento em design patterns",
+    "Conhecimento em testes unitários e TDD",
     "Conhecimento sobre SCRUM e Agile",
     "Conhecimento de BPM",
     "Conhecimentos de segurança de dados",
@@ -137,77 +147,13 @@ const CV_DATA: CVData = {
   ],
 };
 
-// 2. SUB-COMPONENTE DE UI (Apresentação)
-const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
-  <Card
-    hoverable
-    className="h-full border-t-4 shadow-sm"
-    style={{ borderTopColor: data.color }}
-  >
-    <div className="flex items-center mb-4">
-      <div
-        className="p-2 rounded-lg mr-3 text-xl flex items-center justify-center"
-        style={{ backgroundColor: `${data.color}15`, color: data.color }}
-      >
-        {data.icon}
-      </div>
-      <Title level={4} style={{ margin: 0 }}>
-        {data.title}
-      </Title>
-    </div>
 
-    {data.university && (
-      <div className="mb-3">
-        <Text
-          type="secondary"
-          className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
-        >
-          Aulas da Faculdade
-        </Text>
-        <ul className="list-disc list-inside text-sm text-gray-600 leading-relaxed">
-          {data.university.map((item: string, uniIndex: number) => (
-            <li key={uniIndex}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    )}
-
-    {data.extra && (
-      <div className="mb-3">
-        <Text
-          type="secondary"
-          className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
-        >
-          Curso Adicional
-        </Text>
-        <Paragraph className="text-sm italic text-gray-700 m-0">
-          {data.extra}
-        </Paragraph>
-      </div>
-    )}
-
-    {data.tags && (
-      <div className="mt-4 pt-2 border-t border-gray-50">
-        {data.tags.map((tag: string) => (
-          <Tag
-            color="default"
-            key={tag}
-            className="mb-1 rounded-full border-gray-200 text-gray-500"
-          >
-            {tag}
-          </Tag>
-        ))}
-      </div>
-    )}
-  </Card>
-);
-
-// 3. COMPONENTE PRINCIPAL
+// Main Component
 const PortfolioComponent: React.FC = () => {
   return (
     <div className="p-8 bg-gray-50 min-h-screen font-sans">
       <div className="max-w-6xl mx-auto">
-        {/* Header Dinâmico */}
+        {/* Dynamic Header */}
         <header className="mb-12">
           <Title level={2} className="flex items-center gap-3">
             <span className="bg-blue-600 w-2 h-8 rounded-full block" />
@@ -218,7 +164,7 @@ const PortfolioComponent: React.FC = () => {
           </Text>
         </header>
 
-        {/* Grid de Linguagens */}
+        {/* Language Grid */}
         <Row gutter={[24, 24]}>
           {CV_DATA.languages.map((lang: SkillData, langIndex: number) => (
             <Col xs={24} sm={12} lg={8} key={langIndex}>
@@ -229,7 +175,7 @@ const PortfolioComponent: React.FC = () => {
 
         <Divider className="my-16" />
 
-        {/* Seção de Competências */}
+        {/* Competency Section */}
         <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
           <Title
             level={3}

@@ -3,7 +3,7 @@ import Navbar from "@ui/nav-menu";
 
 const ProfileHeaderDark = () => {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <div>
         <ContactPage />
