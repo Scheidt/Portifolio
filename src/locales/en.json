@@ -219,6 +219,10 @@
       "Native English"
     ]
   },
+  "footer": {
+    "copyright": "© 2025 Pedro Henrique Scheidt Prazeres. All rights reserved.",
+    "downloadCV": "Download CV in English"
+  },
   "projects": {
     "sectionTitle": "My Projects",
     "repositoryLink": "Link to repository",

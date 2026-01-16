@@ -1,10 +1,10 @@
 "use client";
 
-import Navbar from "@/components/ui/nav-menu";
-import HorizontalTimeline from "@/components/about/timeline";
+import Experiencia from "@/components/about/experiencia";
 import MinhaFormacao from "@/components/about/minhaformacao";
 import OutrosCursos from "@/components/about/outrosCursos";
-import Experiencia from "@/components/about/experiencia";
+import HorizontalTimeline from "@/components/about/timeline";
+import Navbar from "@/components/ui/nav-menu";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
@@ -30,13 +30,13 @@ const About = () => {
         <MinhaFormacao />
       </div>
       <div>
-        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr style={{ height: "3px", background: "#eee" }} />
       </div>
       <div>
         <OutrosCursos />
       </div>
       <div>
-        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr style={{ height: "3px", background: "#eee" }} />
       </div>
       <div>
         <Experiencia />
