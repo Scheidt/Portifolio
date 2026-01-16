@@ -1,15 +1,9 @@
 import Image from "next/image";
 import Navbar from "@/components/ui/nav-menu";
 import pfp from "@/images/pfp.jpg";
+import translations from "@/locales/ptbr.json";
 
-const TEXT = {
-  name: "Pedro Henrique Scheidt Prazeres",
-  pictureAlt: "Picture",
-  title: "Desenvolvedor Fullstack",
-  aboutHeading: "Meu Perfil",
-  aboutDesc:
-    "Programador fullstack apaixonado por criar soluções digitais e por segurança digital aplicada. Busco sempre inovar e entregar produtos de alta qualidade.",
-};
+const TEXT = translations.home;
 
 const ProfileHeaderDark = () => {
   return (

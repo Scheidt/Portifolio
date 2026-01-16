@@ -6,39 +6,11 @@ import Button from "antd/es/button";
 import message from "antd/es/message";
 import ConfigProvider from "antd/es/config-provider";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import translations from "@/locales/ptbr.json";
 
 const { TextArea } = Input;
 
-const TEXTS = {
-  formSubmitted: "Formulário enviado:",
-  successMessage: "Obrigado! Sua mensagem foi enviada.",
-
-  leftTitle: "Fale conosco",
-  leftIntro:
-    "Adoraria receber sua mensagem. Estou sempre feliz de conversar sobre programação.",
-  contactEmail: "pedro@example.com",
-  contactPhone: "+55 (048) 000-0000",
-  contactAddress: "Endereço: Rua Exemplo, 123, Cidade, País",
-
-  rightTitle: "Envie uma mensagem",
-
-  labelName: "Nome completo",
-  labelEmail: "E-mail",
-  labelSubject: "Assunto",
-  labelMessage: "Mensagem",
-
-  placeholderName: "João da Silva",
-  placeholderEmail: "joao@pixel.com",
-  placeholderSubject: "Como posso ajudar?",
-  placeholderMessage: "Qual o motivo do seu contato?",
-
-  validationNameRequired: "Por favor, insira seu nome",
-  validationEmailRequired: "Por favor, insira seu e-mail",
-  validationEmailInvalid: "Por favor, insira um e-mail válido",
-  validationMessageRequired: "Por favor, insira sua mensagem",
-
-  sendButton: "Enviar mensagem",
-};
+const TEXTS = translations.contact;
 
 const ContactPage = () => {
   const [form] = Form.useForm();
