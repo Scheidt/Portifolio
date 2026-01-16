@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Navbar from "@/components/ui/nav-menu";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 
@@ -12,9 +11,7 @@ const ProfileHeaderDark = () => {
   const TEXT = translations.home;
 
   return (
-    <div>
-      <Navbar />
-      <div className="min-h-screen bg-gray-50 text-gray-800 p-4 md:p-10 font-sans">
+    <div className="min-h-screen bg-gray-50 text-gray-800 p-4 md:p-10 font-sans">
         {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Left: Name + Picture 1 Unit*/}
@@ -51,7 +48,6 @@ const ProfileHeaderDark = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
