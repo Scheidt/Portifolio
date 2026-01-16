@@ -1,6 +1,7 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: <data is never edited, therefore there is no need for a robust ID system> */
 "use client";
 
-import { Typography, Row, Col } from "antd";
+import { Col, Row, Typography } from "antd";
 
 const { Title, Text } = Typography;
 
@@ -51,7 +52,7 @@ const Experiencia = () => {
         <Row gutter={[16, 32]}>
           {/* Título: 1/3 à esquerda */}
           <Col xs={24} md={8}>
-            <Title level={2} className="!text-3xl !font-bold !m-0 !text-black">
+            <Title level={2} className="text-3xl! font-bold! m-0! text-black!">
               Experiência
             </Title>
           </Col>

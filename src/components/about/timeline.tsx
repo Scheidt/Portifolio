@@ -1,9 +1,8 @@
 "use client";
 
-import { Steps, ConfigProvider } from "antd";
+import { ConfigProvider, Steps } from "antd";
 
 interface TimelineProps {
-  // Accepts a dictionary like { "2024": "Started Project", "2025": "Growth" }
   data: Record<string, string>;
 }
 
@@ -17,7 +16,7 @@ const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: "#2563eb", // Blue-600 for the dots
+          colorPrimary: "#2563eb", // Blue-600 for the members of the timeline
         },
       }}
     >

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/ui/nav-menu";
 import pfp from "@/images/pfp.jpg";

@@ -43,7 +43,7 @@ const TEXTS = {
 const ContactPage = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
+  const onFinish = (values: any) => {
     console.log(TEXTS.formSubmitted, values);
     message.success(TEXTS.successMessage);
     form.resetFields();

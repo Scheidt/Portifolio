@@ -1,6 +1,6 @@
 "use client";
 
-import { Typography, Row, Col } from "antd";
+import { Col, Row, Typography } from "antd";
 
 const { Title } = Typography;
 

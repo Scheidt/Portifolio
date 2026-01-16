@@ -1,6 +1,6 @@
 "use client";
 
-import { Typography, Row, Col } from "antd";
+import { Col, Row, Typography } from "antd";
 
 const { Title } = Typography;
 
@@ -10,7 +10,7 @@ const MinhaFormacao = () => {
       <div className="max-w-7xl mx-auto">
         <Row gutter={[16, 24]}>
           <Col xs={24} md={8}>
-            <Title level={2} className="!text-3xl !font-bold !m-0 !text-black">
+            <Title level={2} className="text-3xl! font-bold! m-0! text-black!">
               Minha Formação
             </Title>
           </Col>
