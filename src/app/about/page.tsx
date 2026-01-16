@@ -3,7 +3,7 @@ import HorizontalTimeline from "@/components/about/timeline";
 import MinhaFormacao from "@/components/about/minhaformacao";
 import OutrosCursos from "@/components/about/outrosCursos";
 import Experiencia from "@/components/about/experiencia";
-import translations from "@/locales/brpt.json";
+import translations from "@/locales/ptbr.json";
 
 const About = () => {
   const timelinedata = translations.about.timeline;
