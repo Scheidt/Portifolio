@@ -86,10 +86,7 @@
         {
           "periodo": "02/2025 - 10/2025",
           "instituicao": "Robotics Laboratory (UFSC)",
-          "detalhes": [
-            "Area of activity: AI Development",
-            "Activity: Scholar"
-          ]
+          "detalhes": ["Area of activity: AI Development", "Activity: Scholar"]
         },
         {
           "periodo": "10/2025 - currently",

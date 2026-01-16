@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Navbar from "@/components/ui/nav-menu";
-import pfp from "@/images/pfp.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import pfp from "@/images/pfp.jpg";
 
 const ProfileHeaderDark = () => {
   const { translations } = useLanguage();
@@ -36,7 +36,7 @@ const ProfileHeaderDark = () => {
             </h2>
 
             {/* About Box with blue border and white fill */}
-            <div className="flex-grow border-2 border-blue-600 p-8 bg-white rounded-sm shadow-2xl">
+            <div className="grow border-2 border-blue-600 p-8 bg-white rounded-sm shadow-2xl">
               <h3 className="text-xl font-bold mb-4 border-b border-gray-200 pb-2">
                 {TEXT.aboutHeading}
               </h3>

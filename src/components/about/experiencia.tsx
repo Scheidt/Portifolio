@@ -25,7 +25,7 @@ const Experiencia = () => {
           <Col xs={24} md={16}>
             <div className="md:ml-[20%]">
               <div className="space-y-8">
-                {experiencias.map((exp: any, index: number) => (
+                {experiencias.map((exp, index) => (
                   <div key={index} className="flex flex-col">
                     {/* Linha principal com bullet point */}
                     <div className="flex items-start mb-2">
