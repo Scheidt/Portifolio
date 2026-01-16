@@ -3,6 +3,7 @@
 
 import { Card, Tag, Typography, Row, Col } from "antd";
 import { GithubOutlined, DeploymentUnitOutlined } from "@ant-design/icons";
+import translations from "@/locales/ptbr.json";
 
 const { Title, Paragraph, Text, Link } = Typography;
 
@@ -64,7 +65,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
           type="secondary"
           className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
         >
-          Descrição do Projeto
+          {translations.skills.skillLabels.projectDescription}
         </Text>
         <Paragraph className="text-sm text-gray-600 leading-relaxed m-0">
           {item.description}
@@ -95,7 +96,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
           style={{ color: hasColor ? item.color : "#1677ff" }}
           className="text-sm font-medium hover:opacity-80 transition-opacity"
         >
-          Link para o repositório
+          {translations.projects.repositoryLink}
         </Link>
       </div>
     </Card>

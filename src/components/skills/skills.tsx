@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { Card, Tag, Typography, Divider, Row, Col } from "antd";
+import { Typography, Divider, Row, Col } from "antd";
 import {
   CodeOutlined,
   DatabaseOutlined,
@@ -13,8 +13,9 @@ import {
   BlockOutlined,
 } from "@ant-design/icons"; 
 import SkillCard from "./skillCard";
+import translations from "@/locales/ptbr.json";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography;
 
 // Types
 type SkillData = {
@@ -32,119 +33,48 @@ type CVData = {
   competencies: string[];
 };
 
-// Centralized Data Dicts
+// Build CV_DATA from translations with icons
+const skillsData = translations.skills;
 const CV_DATA: CVData = {
-  header: {
-    title: "Linguagens de Programação",
-    subtitle: "Stack técnica e formação acadêmica aplicada.",
-  },
+  header: skillsData.header,
   languages: [
     {
-      title: "Python",
+      ...skillsData.languages[0], //Python
       icon: <CodeOutlined />,
       color: "#3776ab",
-      university: [
-        "Programação Orientada a Objetos",
-        "Desenvolvimento de Sistemas OO",
-        "Organização e Arquitetura de Computadores",
-      ],
-      extra: "100 Days of Code: The Complete Python Pro Bootcamp (Udemy)",
-      tags: ["Pandas", "Matplotlib", "Statsmodels", "Seaborn"],
     },
     {
-      title: "Web & MERN",
+      ...skillsData.languages[1], // Web & MERN
       icon: <GlobalOutlined />,
       color: "#61dbfb",
-      university: [
-        "Programação para Web",
-        "Desenvolvimento de Sistemas Móveis e Embarcados",
-      ],
-      extra: "The Complete 2023 Web Development Bootcamp (Udemy)",
-      tags: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "MERN",
-        "Next.js",
-        "React",
-        "Node.js",
-        "Ant Design",
-        "Better Auth",
-      ],
     },
     {
-      title: "Bancos de Dados",
+      ...skillsData.languages[2], // Databases
       icon: <DatabaseOutlined />,
       color: "#336791",
-      university: [
-        "Bancos de Dados 1",
-        "Bancos de Dados 2",
-        "Bancos de Dados 3",
-        "Tópicos Especiais em Gerência de Dados",
-      ],
-      tags: [
-        "SQL",
-        "NoSQL",
-        "MongoDB",
-        "PostgreSQL",
-        "MySQL",
-        "Neo4j",
-        "Prisma",
-      ],
     },
     {
-      title: "GoLang",
+      ...skillsData.languages[3], // GoLang
       icon: <BlockOutlined />,
       color: "#00add8",
-      university: ["Programação Paralela e Distribuída"],
     },
     {
-      title: "Docker",
+      ...skillsData.languages[4], // Docker
       icon: <RocketOutlined />,
       color: "#2496ed",
-      extra: "Containerização e Orquestração",
     },
     {
-      title: "C++",
+      ...skillsData.languages[5], // C++
       icon: <ThunderboltOutlined />,
       color: "#00599c",
-      university: [
-        "Sistemas Operacionais",
-        "Programação paralela e multicomputadores",
-        "Desenvolvimento de Sistemas Móveis e Embarcados",
-        "Introdução a Compiladores",
-      ],
     },
     {
-      title: "Java",
+      ...skillsData.languages[6], // Java
       icon: <SafetyCertificateOutlined />,
       color: "#ed8b00",
-      university: [
-        "Programação Orientada a Objetos",
-        "Desenvolvimento de Sistemas OO",
-        "Segurança de Dados",
-      ],
-      extra: "Bouncy Castle - Chaves assimétricas, Assinaturas digitais",
     },
   ],
-  competencies: [
-    "Experiência com programação orientada a objetos e padrão MVC",
-    "Experiência com monitoração (Zabbix e OpMon)",
-    "Experiência com programação multithread concorrente",
-    "Experiência com Docker e containerização",
-    "Experiência com desenvolvimento web (front-end e back-end)",
-    "Experiência com bancos de dados relacionais",
-    "Experiência com Sistemas de autenticação e permissão de usuários",
-    "Experiência com Git e GitHub",
-    "Conhecimento em algoritmos e estruturas de dados",
-    "Conhecimento em design patterns",
-    "Conhecimento em testes unitários e TDD",
-    "Conhecimento sobre SCRUM e Agile",
-    "Conhecimento de BPM",
-    "Conhecimentos de segurança de dados",
-    "Japonês N5",
-    "Inglês nativo",
-  ],
+  competencies: skillsData.competencies,
 };
 
 
@@ -181,7 +111,7 @@ const PortfolioComponent: React.FC = () => {
             level={3}
             className="mb-8 flex items-center gap-2 text-gray-800"
           >
-            COMPETÊNCIAS
+            {skillsData.competenciesTitle}
           </Title>
           <Row gutter={[40, 20]}>
             {CV_DATA.competencies.map((skill: string, compIndex: number) => (

@@ -2,49 +2,12 @@
 "use client";
 
 import { Col, Row, Typography } from "antd";
+import translations from "@/locales/ptbr.json";
 
 const { Title, Text } = Typography;
 
 const Experiencia = () => {
-  const experiencias = [
-    {
-      periodo: "10/2021 - 02/2022",
-      instituicao: "Corte Catarinense de Mediação e Arbitragem",
-      detalhes: [
-        "Área de atuação: Auxiliar Financeiro/ Administrativo / Documentação",
-        "Atividade: Estágio",
-      ],
-    },
-    {
-      periodo: "04/2023 - 08/2023",
-      instituicao: "Federação das Indústrias de Santa Catarina (FIESC)",
-      detalhes: ["Área de atuação: Monitoração e SLA", "Atividade: Estágio"],
-    },
-    {
-      periodo: "02/2025 - 10/2025",
-      instituicao: "Laboratório de Robótica (UFSC)",
-      detalhes: [
-        "Área de atuação: Desenvolvimento de IA",
-        "Atividade: Bolsista",
-      ],
-    },
-    {
-      periodo: "10/2025 - atualmente",
-      instituicao: "Pixel Soluções Digitais (UFSC)",
-      detalhes: [
-        "Área de atuação: Desenvolvimento Fullstack",
-        "Atividade: Voluntário",
-      ],
-    },
-    {
-      periodo: "10/2025 - atualmente",
-      instituicao: "Laboratório REMA (UFSC)",
-      detalhes: [
-        "Área de atuação: Desenvolvimento Backend",
-        "Atividade: Bolsista",
-      ],
-    },
-  ];
+  const experiencias = translations.about.experiencia.items;
 
   return (
     <section className="w-full py-16 px-4 bg-white">
@@ -53,7 +16,7 @@ const Experiencia = () => {
           {/* Título: 1/3 à esquerda */}
           <Col xs={24} md={8}>
             <Title level={2} className="text-3xl! font-bold! m-0! text-black!">
-              Experiência
+              {translations.about.experiencia.title}
             </Title>
           </Col>
 
@@ -61,7 +24,7 @@ const Experiencia = () => {
           <Col xs={24} md={16}>
             <div className="md:ml-[20%]">
               <div className="space-y-8">
-                {experiencias.map((exp, index) => (
+                {experiencias.map((exp: any, index: number) => (
                   <div key={index} className="flex flex-col">
                     {/* Linha principal com bullet point */}
                     <div className="flex items-start mb-2">
@@ -73,7 +36,7 @@ const Experiencia = () => {
 
                     {/* Sub-tópicos com indentação */}
                     <ul className="list-none p-0 m-0 ml-8 space-y-1">
-                      {exp.detalhes.map((detalhe, indx) => (
+                      {exp.detalhes.map((detalhe: string, indx: number) => (
                         <li key={indx} className="flex items-start">
                           <span className="mr-3 text-gray-400 text-lg">○</span>
                           <Text className="text-gray-600 text-base italic">

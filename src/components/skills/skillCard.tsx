@@ -1,19 +1,11 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <data is never edited, therefore there is no need for a robust ID system> */
 "use client";
 
-import React from "react";
-import { Card, Tag, Typography, Divider, Row, Col } from "antd";
-import {
-  CodeOutlined,
-  DatabaseOutlined,
-  GlobalOutlined,
-  SafetyCertificateOutlined,
-  RocketOutlined,
-  ThunderboltOutlined,
-  BlockOutlined,
-} from "@ant-design/icons";
+import { Card, Tag, Typography } from "antd";
+import translations from "@/locales/ptbr.json";
 
 const { Text, Paragraph, Title } = Typography; 
+const skillLabels = translations.skills.skillLabels;
 
 
 
@@ -52,7 +44,7 @@ const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
           type="secondary"
           className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
         >
-          Aulas da Faculdade
+          {skillLabels.universityLabel}
         </Text>
         <ul className="list-disc list-inside text-sm text-gray-600 leading-relaxed">
           {data.university.map((item: string, uniIndex: number) => (
@@ -68,7 +60,7 @@ const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
           type="secondary"
           className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
         >
-          Curso Adicional
+          {skillLabels.extraLabel}
         </Text>
         <Paragraph className="text-sm italic text-gray-700 m-0">
           {data.extra}
