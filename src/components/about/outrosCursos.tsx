@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Typography, Row, Col } from "antd";
 
 const { Title } = Typography;
@@ -38,7 +37,7 @@ const OutrosCursos = () => {
           <Col xs={{ span: 24, order: 1 }} md={{ span: 8, order: 2 }}>
             <Title
               level={2}
-              className="!text-3xl !font-bold !m-0 !text-black md:text-right"
+              className="text-3xl! font-bold! m-0! text-black! md:text-right"
             >
               Outros Cursos
             </Title>

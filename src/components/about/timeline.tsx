@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { Steps, ConfigProvider, theme } from "antd";
+import { Steps, ConfigProvider } from "antd";
 
 interface TimelineProps {
   // Accepts a dictionary like { "2024": "Started Project", "2025": "Growth" }
@@ -9,7 +8,6 @@ interface TimelineProps {
 }
 
 const HorizontalTimeline: React.FC<TimelineProps> = ({ data }) => {
-  // Convert the dictionary into the format Ant Design Steps expects
   const items = Object.entries(data).map(([key, value]) => ({
     title: <span style={{ color: "#1f2937", fontWeight: "bold" }}>{key}</span>,
     description: <span style={{ color: "#6b7280" }}>{value}</span>,

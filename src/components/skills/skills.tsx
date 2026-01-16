@@ -14,7 +14,7 @@ import {
 
 const { Title, Text, Paragraph } = Typography;
 
-// 1. TYPES
+// Types
 type SkillData = {
   title: string;
   icon?: React.ReactNode;
@@ -30,7 +30,7 @@ type CVData = {
   competencies: string[];
 };
 
-// 2. DICIONÁRIO DE DADOS (Configuração Centralizada)
+// Centralized Data Dicts
 const CV_DATA: CVData = {
   header: {
     title: "Linguagens de Programação",
@@ -110,7 +110,7 @@ const CV_DATA: CVData = {
         "Sistemas Operacionais",
         "Programação paralela e multicomputadores",
         "Desenvolvimento de Sistemas Móveis e Embarcados",
-        "Introdução a Compiladores"
+        "Introdução a Compiladores",
       ],
     },
     {
@@ -137,7 +137,7 @@ const CV_DATA: CVData = {
   ],
 };
 
-// 2. SUB-COMPONENTE DE UI (Apresentação)
+// Skill Card Sub-component
 const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
   <Card
     hoverable
@@ -202,12 +202,12 @@ const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
   </Card>
 );
 
-// 3. COMPONENTE PRINCIPAL
+// Main Component
 const PortfolioComponent: React.FC = () => {
   return (
     <div className="p-8 bg-gray-50 min-h-screen font-sans">
       <div className="max-w-6xl mx-auto">
-        {/* Header Dinâmico */}
+        {/* Dynamic Header */}
         <header className="mb-12">
           <Title level={2} className="flex items-center gap-3">
             <span className="bg-blue-600 w-2 h-8 rounded-full block" />
@@ -218,7 +218,7 @@ const PortfolioComponent: React.FC = () => {
           </Text>
         </header>
 
-        {/* Grid de Linguagens */}
+        {/* Language Grid */}
         <Row gutter={[24, 24]}>
           {CV_DATA.languages.map((lang: SkillData, langIndex: number) => (
             <Col xs={24} sm={12} lg={8} key={langIndex}>
@@ -229,7 +229,7 @@ const PortfolioComponent: React.FC = () => {
 
         <Divider className="my-16" />
 
-        {/* Seção de Competências */}
+        {/* Competency Section */}
         <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
           <Title
             level={3}

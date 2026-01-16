@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Typography, Row, Col } from "antd";
 
 const { Title, Text } = Typography;
@@ -50,14 +49,14 @@ const Experiencia = () => {
     <section className="w-full py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <Row gutter={[16, 32]}>
-          {/* Título: Ocupa 1/3 (8 colunas) à esquerda */}
+          {/* Título: 1/3 à esquerda */}
           <Col xs={24} md={8}>
             <Title level={2} className="!text-3xl !font-bold !m-0 !text-black">
               Experiência
             </Title>
           </Col>
 
-          {/* Conteúdo: Ocupa 2/3 (16 colunas) à direita com offset de 1/5 */}
+          {/* Conteúdo: 2/3 à direita c/ offset de 1/5 */}
           <Col xs={24} md={16}>
             <div className="md:ml-[20%]">
               <div className="space-y-8">
@@ -73,8 +72,8 @@ const Experiencia = () => {
 
                     {/* Sub-tópicos com indentação */}
                     <ul className="list-none p-0 m-0 ml-8 space-y-1">
-                      {exp.detalhes.map((detalhe, i) => (
-                        <li key={i} className="flex items-start">
+                      {exp.detalhes.map((detalhe, indx) => (
+                        <li key={indx} className="flex items-start">
                           <span className="mr-3 text-gray-400 text-lg">○</span>
                           <Text className="text-gray-600 text-base italic">
                             {detalhe}

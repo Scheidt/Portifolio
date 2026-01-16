@@ -4,7 +4,6 @@ import PortfolioSkills from "@/components/skills/skills";
 
 const ProfileHeaderDark = () => {
   return (
-    // Main background
     <div>
       <Navbar />
       <div>
