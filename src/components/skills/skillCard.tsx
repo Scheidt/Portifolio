@@ -2,10 +2,9 @@
 "use client";
 
 import { Card, Tag, Typography } from "antd";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const { Text, Paragraph, Title } = Typography; 
-const skillLabels = translations.skills.skillLabels;
+const { Text, Paragraph, Title } = Typography;
 
 
 
@@ -20,7 +19,11 @@ type SkillData = {
 };
 
 // Skill Card Sub-component
-const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
+const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => {
+  const { translations } = useLanguage();
+  const skillLabels = translations.skills.skillLabels;
+
+  return (
   <Card
     hoverable
     className="h-full border-t-4 shadow-sm"
@@ -82,6 +85,7 @@ const SkillCard: React.FC<{ data: SkillData }> = ({ data }) => (
       </div>
     )}
   </Card>
-);
+  );
+};
 
 export default SkillCard;

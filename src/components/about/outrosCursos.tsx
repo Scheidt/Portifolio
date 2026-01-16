@@ -2,11 +2,12 @@
 "use client";
 
 import { Col, Row, Typography } from "antd";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const { Title } = Typography;
 
 const OutrosCursos = () => {
+  const { translations } = useLanguage();
   const outrosCursos = translations.about.outrosCursos;
   return (
     <section className="w-full py-16 px-4 bg-white">

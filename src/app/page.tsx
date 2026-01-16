@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Navbar from "@/components/ui/nav-menu";
 import pfp from "@/images/pfp.jpg";
-import translations from "@/locales/ptbr.json";
-
-const TEXT = translations.home;
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProfileHeaderDark = () => {
+  const { translations } = useLanguage();
+  const TEXT = translations.home;
+
   return (
     <div>
       <Navbar />

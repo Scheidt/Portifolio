@@ -3,7 +3,7 @@
 
 import { Card, Tag, Typography, Row, Col } from "antd";
 import { GithubOutlined, DeploymentUnitOutlined } from "@ant-design/icons";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const { Title, Paragraph, Text, Link } = Typography;
 
@@ -22,7 +22,7 @@ interface ProjectGridProps {
 }
 
 // Individual Project Card
-const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
+const ProjectCard: React.FC<{ item: ProjectItem; projectDescLabel: string; repositoryLabel: string }> = ({ item, projectDescLabel, repositoryLabel }) => {
   const hasColor = !!item.color;
   const accentColor = item.color || "#d1d5db"; // Se não houver cor, usar cinza padrão
 
@@ -65,7 +65,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
           type="secondary"
           className="text-[10px] uppercase font-bold block mb-1 tracking-wider"
         >
-          {translations.skills.skillLabels.projectDescription}
+          {projectDescLabel}
         </Text>
         <Paragraph className="text-sm text-gray-600 leading-relaxed m-0">
           {item.description}
@@ -96,7 +96,7 @@ const ProjectCard: React.FC<{ item: ProjectItem }> = ({ item }) => {
           style={{ color: hasColor ? item.color : "#1677ff" }}
           className="text-sm font-medium hover:opacity-80 transition-opacity"
         >
-          {translations.projects.repositoryLink}
+          {repositoryLabel}
         </Link>
       </div>
     </Card>
@@ -108,6 +108,10 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
   items,
   sectionTitle = "Projetos e Repositórios",
 }) => {
+  const { translations } = useLanguage();
+  const projectDescLabel = translations.skills.skillLabels.projectDescription;
+  const repositoryLabel = translations.projects.repositoryLink;
+
   return (
     <div className="w-full">
       {sectionTitle && (
@@ -122,7 +126,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
       <Row gutter={[24, 24]}>
         {items.map((item, index) => (
           <Col xs={24} sm={12} lg={8} key={index}>
-            <ProjectCard item={item} />
+            <ProjectCard item={item} projectDescLabel={projectDescLabel} repositoryLabel={repositoryLabel} />
           </Col>
         ))}
       </Row>

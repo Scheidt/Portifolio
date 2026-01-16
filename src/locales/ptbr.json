@@ -6,6 +6,10 @@
     "skills": "Habilidades",
     "contact": "Contato"
   },
+  "language": {
+    "en": "English",
+    "ptbr": "Português"
+  },
   "home": {
     "name": "Pedro Henrique Scheidt Prazeres",
     "pictureAlt": "Picture",
