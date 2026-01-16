@@ -1,19 +1,18 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <data is never edited, therefore there is no need for a robust ID system> */
 "use client";
 
-import React from "react";
-import { Typography, Divider, Row, Col } from "antd";
 import {
+  BlockOutlined,
   CodeOutlined,
   DatabaseOutlined,
   GlobalOutlined,
-  SafetyCertificateOutlined,
   RocketOutlined,
+  SafetyCertificateOutlined,
   ThunderboltOutlined,
-  BlockOutlined,
 } from "@ant-design/icons";
-import SkillCard from "./skillCard";
+import { Col, Divider, Row, Typography } from "antd";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SkillCard from "./skillCard";
 
 const { Title, Text } = Typography;
 

@@ -1,8 +1,8 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <data is never edited, therefore there is no need for a robust ID system> */
 "use client";
 
-import { Card, Tag, Typography, Row, Col } from "antd";
-import { GithubOutlined, DeploymentUnitOutlined } from "@ant-design/icons";
+import { DeploymentUnitOutlined, GithubOutlined } from "@ant-design/icons";
+import { Card, Col, Row, Tag, Typography } from "antd";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const { Title, Paragraph, Text, Link } = Typography;
@@ -64,7 +64,7 @@ const ProjectCard: React.FC<{
       </div>
 
       {/* Description */}
-      <div className="mb-3 flex-grow">
+      <div className="mb-3 grow">
         <Text
           type="secondary"
           className="text-[10px] uppercase font-bold block mb-1 tracking-wider"

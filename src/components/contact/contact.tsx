@@ -1,22 +1,51 @@
 "use client";
 
+import Button from "antd/es/button";
+import ConfigProvider from "antd/es/config-provider";
 import Form from "antd/es/form";
 import Input from "antd/es/input";
-import Button from "antd/es/button";
 import message from "antd/es/message";
-import ConfigProvider from "antd/es/config-provider";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import type language from "@/locales/ptbr.json";
 
-type langType = typeof language;
 
+// Types
 const { TextArea } = Input;
+interface ContactTexts {
+  formSubmitted: string;
+  successMessage: string;
+  leftTitle: string;
+  leftIntro: string;
+  contactEmail: string;
+  contactPhone: string;
+  contactAddress: string;
+  rightTitle: string;
+  labelName: string;
+  validationNameRequired: string;
+  placeholderName: string;
+  labelEmail: string;
+  validationEmailRequired: string;
+  validationEmailInvalid: string;
+  placeholderEmail: string;
+  labelSubject: string;
+  placeholderSubject: string;
+  labelMessage: string;
+  validationMessageRequired: string;
+  placeholderMessage: string;
+  sendButton: string;
+}
 
-const ContactPageContent = ({ TEXTS }: { TEXTS: any }) => {
+interface ContactFormValues {
+  name: string;
+  email: string;
+  subject?: string; // Optional field
+  message: string;
+}
+
+const ContactPageContent = ({ TEXTS }: { TEXTS: ContactTexts }) => {
   const [form] = Form.useForm();
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: ContactFormValues) => {
     console.log(TEXTS.formSubmitted, values);
     message.success(TEXTS.successMessage);
     form.resetFields();

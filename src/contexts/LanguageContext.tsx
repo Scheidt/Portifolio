@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import en from "@/locales/en.json";
 import ptbr from "@/locales/ptbr.json";
 
