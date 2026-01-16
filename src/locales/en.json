@@ -6,6 +6,10 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "language": {
+    "en": "English",
+    "ptbr": "Português"
+  },
   "home": {
     "name": "Pedro Henrique Scheidt Prazeres",
     "pictureAlt": "Picture",
@@ -30,7 +34,7 @@
     "labelEmail": "Email",
     "labelSubject": "Subject",
     "labelMessage": "Message",
-    "placeholderName": "John Silva",
+    "placeholderName": "John Doe",
     "placeholderEmail": "john@pixel.com",
     "placeholderSubject": "How can I help you?",
     "placeholderMessage": "What is the reason for your contact?",

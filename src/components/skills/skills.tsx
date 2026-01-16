@@ -13,7 +13,7 @@ import {
   BlockOutlined,
 } from "@ant-design/icons"; 
 import SkillCard from "./skillCard";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const { Title, Text } = Typography;
 
@@ -33,9 +33,11 @@ type CVData = {
   competencies: string[];
 };
 
-// Build CV_DATA from translations with icons
-const skillsData = translations.skills;
-const CV_DATA: CVData = {
+// Main Component
+const PortfolioComponent: React.FC = () => {
+  const { translations } = useLanguage();
+  const skillsData = translations.skills;
+  const CV_DATA: CVData = {
   header: skillsData.header,
   languages: [
     {
@@ -75,11 +77,8 @@ const CV_DATA: CVData = {
     },
   ],
   competencies: skillsData.competencies,
-};
+  };
 
-
-// Main Component
-const PortfolioComponent: React.FC = () => {
   return (
     <div className="p-8 bg-gray-50 min-h-screen font-sans">
       <div className="max-w-6xl mx-auto">
@@ -128,7 +127,7 @@ const PortfolioComponent: React.FC = () => {
         </section>
       </div>
     </div>
-  );
+    );
 };
 
 export default PortfolioComponent;

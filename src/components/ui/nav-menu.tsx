@@ -3,11 +3,12 @@
 import { useRouter, usePathname } from "next/navigation";
 import { DesktopNav } from "@ui/desktopNav";
 import { MobileNav } from "@ui/mobileNav";
-import { NAV_ROUTES } from "@/components/routes";
+import { useNavRoutes } from "@/components/routes";
 
 const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const NAV_ROUTES = useNavRoutes();
 
   const handleNavigation = (path: string) => {
     router.push(path);

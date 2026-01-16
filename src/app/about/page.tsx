@@ -1,11 +1,14 @@
+"use client";
+
 import Navbar from "@/components/ui/nav-menu";
 import HorizontalTimeline from "@/components/about/timeline";
 import MinhaFormacao from "@/components/about/minhaformacao";
 import OutrosCursos from "@/components/about/outrosCursos";
 import Experiencia from "@/components/about/experiencia";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { translations } = useLanguage();
   const timelinedata = translations.about.timeline;
   return (
     <div>

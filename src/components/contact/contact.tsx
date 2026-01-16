@@ -6,13 +6,11 @@ import Button from "antd/es/button";
 import message from "antd/es/message";
 import ConfigProvider from "antd/es/config-provider";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const { TextArea } = Input;
 
-const TEXTS = translations.contact;
-
-const ContactPage = () => {
+const ContactPageContent = ({ TEXTS }: { TEXTS: any }) => {
   const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
@@ -163,6 +161,13 @@ const ContactPage = () => {
       </div>
     </div>
   );
+};
+
+
+
+const ContactPage = () => {
+  const { translations } = useLanguage();
+  return <ContactPageContent TEXTS={translations.contact} />;
 };
 
 export default ContactPage;

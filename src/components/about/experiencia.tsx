@@ -2,11 +2,12 @@
 "use client";
 
 import { Col, Row, Typography } from "antd";
-import translations from "@/locales/ptbr.json";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const { Title, Text } = Typography;
 
 const Experiencia = () => {
+  const { translations } = useLanguage();
   const experiencias = translations.about.experiencia.items;
 
   return (

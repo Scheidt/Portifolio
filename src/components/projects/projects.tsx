@@ -1,9 +1,12 @@
-import FeatureGrid from "@components/projects/projectCard";
-import translations from "@/locales/ptbr.json";
+"use client";
 
-const projetos = translations.projects.items;
+import FeatureGrid from "@components/projects/projectCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProjectComponent = () => {
+  const { translations } = useLanguage();
+  const projetos = translations.projects.items;
+
   return (
     <FeatureGrid
       items={projetos}
