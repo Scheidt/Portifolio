@@ -182,7 +182,7 @@
         "extra": "Containerization and Orchestration"
       },
       {
-        "title": "C++",
+        "title": "C and C++",
         "university": [
           "Operating Systems",
           "Parallel and multicomputer programming",
@@ -280,6 +280,12 @@
         "description": "Implementation of a two-dimensional array in Python without using Python arrays, with features for insertion, removal and search of elements.",
         "tags": ["Python", "Data Structures", "Arrays", "Algorithms"],
         "link": "https://github.com/Scheidt/SuperArray"
+      },
+      {
+        "title": "Multithreaded Game in C",
+        "description": "Multithreaded game with access control of shared resources. Simultaneous Operators compete for limited resources (bridge access), demonstrating concepts of syncronization and prenvention of race conditions.",
+        "tags": ["C", "Multithreading", "Racing Conditions", "Synchronization"],
+        "link": "https://github.com/Scheidt/trabalho_Sistemas_Operacionais"
       }
     ]
   }

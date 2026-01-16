@@ -185,7 +185,7 @@
         "extra": "Containerização e Orquestração"
       },
       {
-        "title": "C++",
+        "title": "C e C++",
         "university": [
           "Sistemas Operacionais",
           "Programação paralela e multicomputadores",
@@ -283,6 +283,12 @@
         "description": "Implementação de um array bidimensional em Python sem o uso de arrays Python, com funcionalidades de inserção, remoção e busca de elementos.",
         "tags": ["Python", "Data Structures", "Arrays", "Algorithms"],
         "link": "https://github.com/Scheidt/SuperArray"
+      },
+      {
+        "title": "Jogo Multithread em C",
+        "description": "Jogo multithread com controle de acesso a recursos compartilhados. Operadores simultâneos competindo por recursos limitados, demonstrando conceitos de sincronização e prevenção de condições de corrida.",
+        "tags": ["C", "Multithreading", "Racing Conditions", "Synchronization"],
+        "link": "https://github.com/Scheidt/trabalho_Sistemas_Operacionais"
       }
     ]
   }
