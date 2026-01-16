@@ -1,8 +1,4 @@
 import FeatureGrid from "@components/projects/projectCard";
-import { Descriptions } from "antd";
-import Title from "antd/es/skeleton/Title";
-import { link } from "fs";
-import { Tags } from "lucide-react";
 
 /*
 interface ProjectItem {
@@ -70,7 +66,6 @@ const ProjectComponent = () => {
     <FeatureGrid
       items={projetos}
       sectionTitle="Meus Projetos"
-      accentColor="#ff5722"
     />
   );
 };
