@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Navbar from "@/components/ui/nav-menu";
 import { useLanguage } from "@/contexts/LanguageContext";
-import pfp from "@/images/pfp.jpg";
+
+
+const imgPath = "/images/pfp.jpg";
 
 const ProfileHeaderDark = () => {
   const { translations } = useLanguage();
@@ -22,8 +24,10 @@ const ProfileHeaderDark = () => {
             </h1>
             <div className="w-full aspect-square border-4 border-blue-600 flex items-center justify-center bg-white transition-hover hover:bg-gray-50 overflow-hidden">
               <Image
-                src={pfp}
+                src={imgPath}
                 alt={TEXT.pictureAlt}
+                width={500} 
+                height={500}
                 className="w-full h-full object-cover"
               />
             </div>
