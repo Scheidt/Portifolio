@@ -1,0 +1,281 @@
+{
+  "navigation": {
+    "home": "HOME",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "home": {
+    "name": "Pedro Henrique Scheidt Prazeres",
+    "pictureAlt": "Picture",
+    "title": "Fullstack Developer",
+    "aboutHeading": "My Profile",
+    "aboutDesc": "Fullstack programmer passionate about creating digital solutions and applied digital security. I always seek to innovate and deliver high-quality products."
+  },
+  "layout": {
+    "title": "Pedro Henrique - Portfolio",
+    "description": "Portfolio of Pedro Henrique Scheidt Prazeres, fullstack developer specialized in digital solutions and digital security."
+  },
+  "contact": {
+    "formSubmitted": "Form submitted:",
+    "successMessage": "Thank you! Your message has been sent.",
+    "leftTitle": "Get in touch",
+    "leftIntro": "I'd love to hear from you. I'm always happy to talk about programming.",
+    "contactEmail": "pedro@example.com",
+    "contactPhone": "+55 (048) 000-0000",
+    "contactAddress": "Address: Example Street, 123, City, Country",
+    "rightTitle": "Send a message",
+    "labelName": "Full name",
+    "labelEmail": "Email",
+    "labelSubject": "Subject",
+    "labelMessage": "Message",
+    "placeholderName": "John Silva",
+    "placeholderEmail": "john@pixel.com",
+    "placeholderSubject": "How can I help you?",
+    "placeholderMessage": "What is the reason for your contact?",
+    "validationNameRequired": "Please enter your name",
+    "validationEmailRequired": "Please enter your email",
+    "validationEmailInvalid": "Please enter a valid email",
+    "validationMessageRequired": "Please enter your message",
+    "sendButton": "Send message"
+  },
+  "about": {
+    "title": "My Journey",
+    "formacao": {
+      "title": "My Formation",
+      "items": [
+        "I completed high school at Colégio Energia between 2016 and 2019.",
+        "I then attended the Gaia preparatory course in the first semester of 2020.",
+        "In 2020.2 I entered as a scholarship student for the Law course at Unisul.",
+        "In 2022.1 I entered Information Systems at UFSC.",
+        "My graduation in Information Systems is scheduled for July 2026."
+      ]
+    },
+    "outrosCursos": {
+      "title": "Other Courses",
+      "items": [
+        "Python Programming Course - Udemy (in progress)",
+        "(2020) Conflict Resolution Course - Catarinense Court of Mediation and Arbitration",
+        "Japanese Language Course (3 years) - Nipo Catarinense Association"
+      ]
+    },
+    "experiencia": {
+      "title": "Experience",
+      "items": [
+        {
+          "periodo": "10/2021 - 02/2022",
+          "instituicao": "Catarinense Court of Mediation and Arbitration",
+          "detalhes": [
+            "Area of activity: Financial/Administrative Assistant/Documentation",
+            "Activity: Internship"
+          ]
+        },
+        {
+          "periodo": "04/2023 - 08/2023",
+          "instituicao": "Federation of Industries of Santa Catarina (FIESC)",
+          "detalhes": [
+            "Area of activity: Monitoring and SLA",
+            "Activity: Internship"
+          ]
+        },
+        {
+          "periodo": "02/2025 - 10/2025",
+          "instituicao": "Robotics Laboratory (UFSC)",
+          "detalhes": [
+            "Area of activity: AI Development",
+            "Activity: Scholar"
+          ]
+        },
+        {
+          "periodo": "10/2025 - currently",
+          "instituicao": "Pixel Digital Solutions (UFSC)",
+          "detalhes": [
+            "Area of activity: Fullstack Development",
+            "Activity: Volunteer"
+          ]
+        },
+        {
+          "periodo": "10/2025 - currently",
+          "instituicao": "REMA Laboratory (UFSC)",
+          "detalhes": [
+            "Area of activity: Backend Development",
+            "Activity: Scholar"
+          ]
+        }
+      ]
+    },
+    "timeline": {
+      "2020": "I entered Law school",
+      "2022": "I realized I didn't like Law, withdrew from the course and entered Information Systems",
+      "2023": "I started my journey as a Fullstack developer",
+      "2025": "I joined Pixel as a Fullstack developer and REMA laboratory as a Backend developer",
+      "2026": "Continue growing and learning as a developer"
+    }
+  },
+  "skills": {
+    "header": {
+      "title": "Programming Languages",
+      "subtitle": "Technical stack and applied academic training."
+    },
+    "competenciesTitle": "COMPETENCIES",
+    "skillLabels": {
+      "universityLabel": "College Classes",
+      "extraLabel": "Additional Knowledge",
+      "projectDescription": "Project Description"
+    },
+    "languages": [
+      {
+        "title": "Python",
+        "university": [
+          "Object-Oriented Programming",
+          "OO Systems Development",
+          "Computer Organization and Architecture"
+        ],
+        "extra": "100 Days of Code: The Complete Python Pro Bootcamp (Udemy)",
+        "tags": ["Pandas", "Matplotlib", "Statsmodels", "Seaborn"]
+      },
+      {
+        "title": "Web & MERN",
+        "university": [
+          "Web Programming",
+          "Mobile and Embedded Systems Development"
+        ],
+        "extra": "The Complete 2023 Web Development Bootcamp (Udemy)",
+        "tags": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "MERN",
+          "Next.js",
+          "React",
+          "Node.js",
+          "Ant Design",
+          "Better Auth"
+        ]
+      },
+      {
+        "title": "Databases",
+        "university": [
+          "Databases 1",
+          "Databases 2",
+          "Databases 3",
+          "Special Topics in Data Management"
+        ],
+        "tags": [
+          "SQL",
+          "NoSQL",
+          "MongoDB",
+          "PostgreSQL",
+          "MySQL",
+          "Neo4j",
+          "Prisma"
+        ]
+      },
+      {
+        "title": "GoLang",
+        "university": ["Parallel and Distributed Programming"]
+      },
+      {
+        "title": "Docker",
+        "extra": "Containerization and Orchestration"
+      },
+      {
+        "title": "C++",
+        "university": [
+          "Operating Systems",
+          "Parallel and multicomputer programming",
+          "Mobile and Embedded Systems Development",
+          "Introduction to Compilers"
+        ]
+      },
+      {
+        "title": "Java",
+        "university": [
+          "Object-Oriented Programming",
+          "OO Systems Development",
+          "Data Security"
+        ],
+        "extra": "Bouncy Castle - Asymmetric Keys, Digital Signatures"
+      }
+    ],
+    "competencies": [
+      "Experience with object-oriented programming and MVC pattern",
+      "Experience with monitoring (Zabbix and OpMon)",
+      "Experience with concurrent multithreading programming",
+      "Experience with Docker and containerization",
+      "Experience with web development (front-end and back-end)",
+      "Experience with relational databases",
+      "Experience with user authentication and permission systems",
+      "Experience with Git and GitHub",
+      "Knowledge in algorithms and data structures",
+      "Knowledge in design patterns",
+      "Knowledge in unit testing and TDD",
+      "Knowledge about SCRUM and Agile",
+      "Knowledge of BPM",
+      "Knowledge of data security",
+      "Japanese N5",
+      "Native English"
+    ]
+  },
+  "projects": {
+    "sectionTitle": "My Projects",
+    "repositoryLink": "Link to repository",
+    "items": [
+      {
+        "title": "REMA Contaminant Calculation System",
+        "description": "Web calculator for analysis of environmental contaminants, created for the REMA laboratory.",
+        "tags": ["Javascript", "Next.js", "TypeScript", "ReactHooks", "XLSX"],
+        "link": "https://github.com/Scheidt/desafio-REMA"
+      },
+      {
+        "title": "Creation, Manipulation and Validation of Asymmetric Keys",
+        "description": "LABSEC Challenge - Creation of a Java system for generation, manipulation and validation of asymmetric keys using the BouncyCastle library. Additionally, the first 4 questions of Cryptopals",
+        "tags": [
+          "Java",
+          "BouncyCastle",
+          "Cryptography",
+          "Cybersecurity",
+          "Assimetric Keys"
+        ],
+        "link": "https://github.com/Scheidt/Desafio-Labsec"
+      },
+      {
+        "title": "Binary Classifier with Machine Learning",
+        "description": "Binary Classifier using two models: Naive Bayes and MLP.",
+        "tags": [
+          "Python",
+          "Machine Learning",
+          "Scikit-Learn",
+          "Pandas",
+          "NumPy"
+        ],
+        "link": "https://github.com/Scheidt/Classificador-Binario"
+      },
+      {
+        "title": "Multithread Project in GO",
+        "description": "Project developed in Go to demonstrate concepts of concurrent programming and multithreading.",
+        "tags": [
+          "GoLang",
+          "Concurrency",
+          "Goroutines",
+          "Channels",
+          "Multithreading"
+        ],
+        "link": "https://github.com/Scheidt/Projeto-Threads-GO"
+      },
+      {
+        "title": "Decision Tree in Python",
+        "description": "Implementation of a decision tree from scratch in Python, with dynamic creation based on User Inputs.",
+        "tags": ["Python", "Data Structures", "Algorithms", "Decision Tree"],
+        "link": "https://github.com/Scheidt/TrabalhoEstruturasArvoreDeDecisao"
+      },
+      {
+        "title": "Two-Dimensional Array",
+        "description": "Implementation of a two-dimensional array in Python without using Python arrays, with features for insertion, removal and search of elements.",
+        "tags": ["Python", "Data Structures", "Arrays", "Algorithms"],
+        "link": "https://github.com/Scheidt/SuperArray"
+      }
+    ]
+  }
+}
