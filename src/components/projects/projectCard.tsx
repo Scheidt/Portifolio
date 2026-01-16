@@ -22,7 +22,11 @@ interface ProjectGridProps {
 }
 
 // Individual Project Card
-const ProjectCard: React.FC<{ item: ProjectItem; projectDescLabel: string; repositoryLabel: string }> = ({ item, projectDescLabel, repositoryLabel }) => {
+const ProjectCard: React.FC<{
+  item: ProjectItem;
+  projectDescLabel: string;
+  repositoryLabel: string;
+}> = ({ item, projectDescLabel, repositoryLabel }) => {
   const hasColor = !!item.color;
   const accentColor = item.color || "#d1d5db"; // Se não houver cor, usar cinza padrão
 
@@ -126,7 +130,11 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({
       <Row gutter={[24, 24]}>
         {items.map((item, index) => (
           <Col xs={24} sm={12} lg={8} key={index}>
-            <ProjectCard item={item} projectDescLabel={projectDescLabel} repositoryLabel={repositoryLabel} />
+            <ProjectCard
+              item={item}
+              projectDescLabel={projectDescLabel}
+              repositoryLabel={repositoryLabel}
+            />
           </Col>
         ))}
       </Row>

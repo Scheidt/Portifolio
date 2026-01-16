@@ -18,7 +18,7 @@ const translations: Record<Language, typeof en> = {
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const LanguageProvider = ({

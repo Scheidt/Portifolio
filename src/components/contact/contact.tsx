@@ -7,6 +7,9 @@ import message from "antd/es/message";
 import ConfigProvider from "antd/es/config-provider";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import type language from "@/locales/ptbr.json";
+
+type langType = typeof language;
 
 const { TextArea } = Input;
 
@@ -162,8 +165,6 @@ const ContactPageContent = ({ TEXTS }: { TEXTS: any }) => {
     </div>
   );
 };
-
-
 
 const ContactPage = () => {
   const { translations } = useLanguage();

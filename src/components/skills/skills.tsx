@@ -11,7 +11,7 @@ import {
   RocketOutlined,
   ThunderboltOutlined,
   BlockOutlined,
-} from "@ant-design/icons"; 
+} from "@ant-design/icons";
 import SkillCard from "./skillCard";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -38,45 +38,45 @@ const PortfolioComponent: React.FC = () => {
   const { translations } = useLanguage();
   const skillsData = translations.skills;
   const CV_DATA: CVData = {
-  header: skillsData.header,
-  languages: [
-    {
-      ...skillsData.languages[0], //Python
-      icon: <CodeOutlined />,
-      color: "#3776ab",
-    },
-    {
-      ...skillsData.languages[1], // Web & MERN
-      icon: <GlobalOutlined />,
-      color: "#61dbfb",
-    },
-    {
-      ...skillsData.languages[2], // Databases
-      icon: <DatabaseOutlined />,
-      color: "#336791",
-    },
-    {
-      ...skillsData.languages[3], // GoLang
-      icon: <BlockOutlined />,
-      color: "#00add8",
-    },
-    {
-      ...skillsData.languages[4], // Docker
-      icon: <RocketOutlined />,
-      color: "#2496ed",
-    },
-    {
-      ...skillsData.languages[5], // C++
-      icon: <ThunderboltOutlined />,
-      color: "#00599c",
-    },
-    {
-      ...skillsData.languages[6], // Java
-      icon: <SafetyCertificateOutlined />,
-      color: "#ed8b00",
-    },
-  ],
-  competencies: skillsData.competencies,
+    header: skillsData.header,
+    languages: [
+      {
+        ...skillsData.languages[0], //Python
+        icon: <CodeOutlined />,
+        color: "#3776ab",
+      },
+      {
+        ...skillsData.languages[1], // Web & MERN
+        icon: <GlobalOutlined />,
+        color: "#61dbfb",
+      },
+      {
+        ...skillsData.languages[2], // Databases
+        icon: <DatabaseOutlined />,
+        color: "#336791",
+      },
+      {
+        ...skillsData.languages[3], // GoLang
+        icon: <BlockOutlined />,
+        color: "#00add8",
+      },
+      {
+        ...skillsData.languages[4], // Docker
+        icon: <RocketOutlined />,
+        color: "#2496ed",
+      },
+      {
+        ...skillsData.languages[5], // C++
+        icon: <ThunderboltOutlined />,
+        color: "#00599c",
+      },
+      {
+        ...skillsData.languages[6], // Java
+        icon: <SafetyCertificateOutlined />,
+        color: "#ed8b00",
+      },
+    ],
+    competencies: skillsData.competencies,
   };
 
   return (
@@ -127,7 +127,7 @@ const PortfolioComponent: React.FC = () => {
         </section>
       </div>
     </div>
-    );
+  );
 };
 
 export default PortfolioComponent;

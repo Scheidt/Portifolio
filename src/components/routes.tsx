@@ -3,7 +3,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const NAV_ROUTES_STATIC = {
-  "en": [
+  en: [
     { label: "About", key: "/about" },
     { label: "Projects", key: "/projects" },
     { label: "Skills", key: "/skills" },
