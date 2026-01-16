@@ -1,22 +1,27 @@
 "use client";
 
+import { Typography } from "antd";
 import Experiencia from "@/components/about/experiencia";
 import MinhaFormacao from "@/components/about/minhaformacao";
 import OutrosCursos from "@/components/about/outrosCursos";
 import HorizontalTimeline from "@/components/about/timeline";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const { Title } = Typography;
+
 const About = () => {
   const { translations } = useLanguage();
   const timelinedata = translations.about.timeline;
   return (
     <div>
-      <div
-        className="text-black!"
-        style={{ background: "#f9fafb", fontSize: "400%", fontWeight: 700 }}
-      >
-        {translations.about.title}
-      </div>
+      <header className="p-8 bg-[#f9fafb]">
+        <div className="max-w-6xl mx-auto">
+          <Title level={2} className="flex items-center gap-3" style={{ margin: 0 }}>
+            <span className="bg-blue-600 w-2 h-8 rounded-full block" />
+            {translations.about.title}
+          </Title>
+        </div>
+      </header>
       <div
         style={{ background: "#f9fafb", minHeight: "60vh", padding: "100px" }}
       >
