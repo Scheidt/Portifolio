@@ -182,7 +182,7 @@
         "extra": "Containerization and Orchestration"
       },
       {
-        "title": "C and C++",
+        "title": "C++",
         "university": [
           "Operating Systems",
           "Parallel and multicomputer programming",
@@ -282,9 +282,9 @@
         "link": "https://github.com/Scheidt/SuperArray"
       },
       {
-        "title": "Multithreaded Game in C",
+        "title": "Multithreaded Game in C++",
         "description": "Multithreaded game with access control of shared resources. Simultaneous Operators compete for limited resources (bridge access), demonstrating concepts of syncronization and prenvention of race conditions.",
-        "tags": ["C", "Multithreading", "Racing Conditions", "Synchronization"],
+        "tags": ["C++", "Multithreading", "Racing Conditions", "Synchronization"],
         "link": "https://github.com/Scheidt/trabalho_Sistemas_Operacionais"
       }
     ]
