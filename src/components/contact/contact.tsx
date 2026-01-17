@@ -8,7 +8,6 @@ import message from "antd/es/message";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-
 // Types
 const { TextArea } = Input;
 interface ContactTexts {
