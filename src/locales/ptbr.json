@@ -51,7 +51,7 @@
       "items": [
         "Fiz ensino médio no Colégio Energia entre os anos de 2016 e 2019.",
         "Segui para o Cursinho preparatório Gaia no primeiro semestre de 2020.",
-        "Em 2020.2 entrei como bolsista para o curso de Direito na Unisul.",
+        "Em 2020.2 entrei para o curso de Direito na Unisul.",
         "Em 2022.1 entrei para Sistemas de Informação na UFSC.",
         "Minha formação em Sistemas da Informação está prevista para Julho de 2026."
       ]
@@ -111,7 +111,7 @@
     },
     "timeline": {
       "2020": "Entrei para o Direito",
-      "2022": "Percebi que não gostava de Direito, tranquei o curso e entrei para Sistemas da Informação",
+      "2022": "Percebi ser apaixonado pela progamação, tranquei o curso de Direito e entrei para Sistemas da Informação na UFSC",
       "2023": "Iniciei minha jornada como desenvolvedor Fullstack",
       "2025": "Entrei para a Pixel como desenvolvedor Fullstack e para o laboratório REMA como desenvolvedor Backend",
       "2026": "Continuar crescendo e aprendendo como desenvolvedor"
@@ -124,7 +124,7 @@
     },
     "competenciesTitle": "COMPETÊNCIAS",
     "skillLabels": {
-      "universityLabel": "Aulas da Faculdade",
+      "universityLabel": "Aulas da UFSC",
       "extraLabel": "Conhecimentos adicionais",
       "projectDescription": "Descrição do Projeto"
     },

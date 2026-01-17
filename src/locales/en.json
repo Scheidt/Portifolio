@@ -51,7 +51,7 @@
       "items": [
         "I completed high school at Colégio Energia between 2016 and 2019.",
         "I then attended the Gaia preparatory course in the first semester of 2020.",
-        "In 2020.2 I entered as a scholarship student for the Law course at Unisul.",
+        "In 2020.2 I entered the Law course at Unisul.",
         "In 2022.1 I entered Information Systems at UFSC.",
         "My graduation in Information Systems is scheduled for July 2026."
       ]
@@ -108,7 +108,7 @@
     },
     "timeline": {
       "2020": "I entered Law school",
-      "2022": "I realized I didn't like Law, withdrew from the course and entered Information Systems",
+      "2022": "I realized I love programming and withdrew from law school to join Information Systems at UFSC",
       "2023": "I started my journey as a Fullstack developer",
       "2025": "I joined Pixel as a Fullstack developer and REMA laboratory as a Backend developer",
       "2026": "Continue growing and learning as a developer"
@@ -121,7 +121,7 @@
     },
     "competenciesTitle": "COMPETENCIES",
     "skillLabels": {
-      "universityLabel": "College Classes",
+      "universityLabel": "UFSC Classes",
       "extraLabel": "Additional Knowledge",
       "projectDescription": "Project Description"
     },
